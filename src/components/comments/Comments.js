@@ -1,6 +1,6 @@
 import { Avatar, Box, Card, CardContent, CardHeader, Grid, Stack, Typography  } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import React, { useState, useEffect }  from 'react'
+import React from 'react'
 import FormatQuoteRoundedIcon from '@mui/icons-material/FormatQuoteRounded';
 import { red } from '@mui/material/colors';
 
@@ -65,14 +65,11 @@ const Comments = () => {
   const theme = useTheme(); 
   return (
     <Grid container   sx={{ 
-         
         bgcolor: `${theme.palette.primary.white}`,
         //textAlign: 'center',
         //overflowY: 'hidden',
         overflow: 'auto',
         //minWidth: 0,
-        
-  
         }} direction="row" alignItems="center" justifyContent="flex-start"  padding={3}>
         {/* <Grid item>
           <Stack direction="column">
@@ -94,7 +91,7 @@ const Comments = () => {
                 '::-webkit-scrollbar': { display: 'none' },
             }}>
           {commentsList.map((itm, idx)=>
-              <Card sx={{ minWidth:285,maxWidth:450  }} orientation="horizontal"  >
+              <Card sx={{ minWidth:285,maxWidth:450  }} orientation="horizontal" key={idx} >
                 <CardHeader 
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }}>

@@ -49,7 +49,7 @@ const Project = ()  => {
       
       <Grid item container direction={{ xs:"column", md:"row" }} rowSpacing={1} columnSpacing={3}  padding={2} alignItems="center" justifyContent="space-between">
         {projectsData.map((itm, idx)=> {
-          console.log('here')
+          //console.log('in Projects')
            return(
           <Grid item xs={12} sm={6} md={4} key={idx}>
             <Card sx={{ maxWidth: 450, minWidth:250 }}  >

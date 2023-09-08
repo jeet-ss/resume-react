@@ -23,11 +23,11 @@ const Home = ()  => {
         //      color: `${theme.palette.primary.contrastText}`,
         //       }}>            
         <Grid  container sx={{ 
-          height: 350,  
+          minHeight: 350,  
           bgcolor: `${theme.palette.primary.main}`, 
           color: `${theme.palette.primary.contrastText}`, 
           //textAlign: 'center',
-          overflow: 'hidden',
+          overflow: 'auto',
           
           }} direction="row" alignContent="center" justifyContent="center" spacing={3} padding={2} >
             <Grid item>

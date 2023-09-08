@@ -52,7 +52,10 @@ const theme = createTheme({
     },
     location_gray:{
       main: '#afaeb1'
-    }
+    },
+    love_red:{
+      main:'#BB001B'
+    },
   },
 });
 

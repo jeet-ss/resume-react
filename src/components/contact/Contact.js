@@ -1,6 +1,6 @@
-import {  Grid, IconButton, Stack, Typography, SvgIcon,  } from '@mui/material';
+import {  Grid, IconButton, Stack, Typography, SvgIcon, } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -8,13 +8,32 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import PhoneIcon from '@mui/icons-material/Phone';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const Contact=()=> {
   const theme = useTheme(); 
+  // for email link
   const email = 'jeet.sensarma@gmail.com'
-  const body = 'Hello Worjld'
-  const subject = 'Contact me'
+  const body = 'Hey, I am interested in your work. Let us meet online! '
+  const subject = 'Contact from Website'
+
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
+    }
+  }, []);
+
+  const icon_size = isDesktop?'large':'medium'
+  const orientation_ = isDesktop?'row':'column'
+
   return (
     <Grid  container sx={{ 
       //height: 350,  
@@ -24,31 +43,31 @@ const Contact=()=> {
       overflow: 'hidden',
       
       }} direction="column" alignContent="center" justifyContent="center" padding={2} >
-        <Grid item container direction="rows" alignContent="center" justifyContent="center" spacing={3} padding={2}>
+        <Grid item container direction="row" alignContent="center" justifyContent="center" spacing={3} padding={2}>
           <Grid item>          
             <IconButton href='https://www.linkedin.com/in/jeet-sensarma/' >
-              <LinkedInIcon color='linkedin_blue' fontSize="large"  />
+              <LinkedInIcon color='linkedin_blue' fontSize={icon_size}  />
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton href='https://github.com/jeet-ss' >
-              <GitHubIcon color='github_white' fontSize="large"  />
+              <GitHubIcon color='github_white' fontSize={icon_size}  />
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton href={`mailto:${email}?subject=${encodeURIComponent(subject) || ''}&body=${encodeURIComponent(body) || ''}`} >
-              <EmailIcon  color='gmail_red' fontSize="large" />
+              <EmailIcon  color='gmail_red' fontSize={icon_size} />
             </IconButton >
           </Grid>
           <Grid item>
             <IconButton href={`https://wa.me/15750650812`}>
-              <WhatsAppIcon color='whatsapp_green' fontSize="large"  />
+              <WhatsAppIcon color='whatsapp_green' fontSize={icon_size}  />
             </IconButton>
           </Grid>
           <Grid item>
             <IconButton href='https://twitter.com/sensarma5_jeet?t=U4Nqh80Z_lXb1fofUwg7hQ&s=09'>
-              <SvgIcon fontSize="large" color='github_white'>
-              <svg version="1.1" id="svg5" xmlnsSvg="http://www.w3.org/2000/svg"
+              <SvgIcon fontSize={icon_size} color='github_white'>
+              <svg version="1.1" id="svg5" 
                 xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1668.56 1221.19"
                 xmlSpace="preserve">
                 <g id="layer1" transform="translate(52.390088,-25.058597)">
@@ -62,21 +81,43 @@ const Contact=()=> {
           
         </Grid>
         <Grid item>
-            <Stack direction="row" alignItems="center" justifyContent="center"   >
-            <IconButton href={`tel:+4915750650812`} >
-              <PhoneIcon color='phone_blue' fontSize="large"  />
-            </IconButton>
-            <Typography sx={{ textAlign:'center', textJustify:'center', }}>+49-15750650812</Typography>
+          <Stack direction={orientation_} alignItems="center" justifyContent="center" columnGap={5} rowGap={0}> 
+            <Stack direction="row" alignItems="center" justifyContent="center"  >
+              <IconButton href='https://jeetsensarma.vercel.app'>
+                <SvgIcon fontSize={icon_size} >
+                <svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" strokeWidth="3" stroke="#61DAFB" fill='none'>
+                    <g  >
+                    <path d="M39.93,55.72A24.86,24.86,0,1,1,56.86,32.15a37.24,37.24,0,0,1-.73,6"/>
+                    <path d="M37.86,51.1A47,47,0,0,1,32,56.7"/>
+                    <path d="M32,7A34.14,34.14,0,0,1,43.57,30a34.07,34.07,0,0,1,.09,4.85"  />
+                    <path d="M32,7A34.09,34.09,0,0,0,20.31,32.46c0,16.2,7.28,21,11.66,24.24" />
+                    <line x1="10.37" y1="19.9" x2="53.75" y2="19.9"  />
+                    <line x1="32" y1="6.99" x2="32" y2="56.7"/>
+                    <line x1="11.05" y1="45.48" x2="37.04" y2="45.48"/>
+                    <line x1="7.14" y1="32.46" x2="56.86" y2="31.85"/>
+                    <path d="M53.57,57,58,52.56l-8-8,4.55-2.91a.38.38,0,0,0-.12-.7L39.14,37.37a.39.39,0,0,0-.46.46L42,53.41a.39.39,0,0,0,.71.13L45.57,49Z"/>
+                    </g>
+                </svg>
+                </SvgIcon>
+              </IconButton>
+              <Typography>jeetsensarma.vercel.app</Typography>
             </Stack>
-        </Grid>
-        <Grid item>
+            <Stack direction="row" alignItems="center" justifyContent="center"   >
+              <IconButton href={`tel:+4915750650812`} >
+                <PhoneIcon color='phone_blue' fontSize={icon_size}  />
+              </IconButton>
+              <Typography sx={{ textAlign:'center', textJustify:'center', }}>+49-15750650812</Typography>
+            </Stack>
+        {/* </Grid>
+        <Grid item> */}
           <Stack direction="row" justifyContent="center" alignItems="center" >
             <IconButton href='https://goo.gl/maps/yrZFEj4iVpCAvrAj8' >
-              <SvgIcon fontSize="large"  >
+              <SvgIcon fontSize={icon_size}  >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2020 1516">
                 {/* <path d="M1023 1638l82.8-34.4c-4.6-11.6-18.2-19.6-34.4-19.6-20.7-.1-49.4 18.2-48.4 54m97.2 33.3l31.6 21c-10.2 15.1-34.7 41.1-77.2 41.1-52.6 0-90.6-40.7-90.6-92.6 0-55.1 38.3-92.6 86.1-92.6 43.9 1.5 71.2 29.8 83.5 69.4l-124 51.2c9.5 18.6 24.2 28.1 44.9 28.1 20.6 0 35-10.2 45.5-25.6m-201 56.5h40.7v-272H919zm-66.4-86.7c0-32.6-21.8-56.5-49.5-56.5-28 0-51.6 23.9-51.6 56.5 0 32.3 23.5 55.8 51.6 55.8 27.8 0 49.5-23.5 49.5-55.8zm35.8-87.3v166c0 68.4-40.3 96.5-88 96.5-44.9 0-71.9-30.2-82.1-54.7l35.4-14.7c6.3 15.1 21.8 33 46.7 33 45.5-5.17 49.5-34.6 49.5-67.7h-1.5c-9.1 11.2-26.7 21.1-48.8 21.1-46.3 0-88.8-40.3-88.8-92.3 0-52.3 42.4-93 88.8-93 22.1 0 39.7 9.8 48.8 20.7h1.4v-15.1c0-.1 38.6-.1 38.6-.1zm-444 87c0-33.3-23.8-56.1-51.3-56.1-27.6 0-51.3 22.8-51.3 56.1 0 33 23.8 56.1 51.3 56.1s51.3-23.2 51.3-56.1m40 0c0 53.3-41 92.6-91.3 92.6s-91.3-39.3-91.3-92.6c0-53.7 41-92.6 91.3-92.6s91.3 38.9 91.3 92.6m165 0c0-33.3-23.8-56.1-51.3-56.1-27.6 0-51.3 22.8-51.3 56.1 0 33 23.8 56.1 51.3 56.1s51.3-23.2 51.3-56.1m40 0c0 53.3-41 92.6-91.3 92.6s-91.3-39.3-91.3-92.6c0-53.7 41-92.6 91.3-92.6s91.3 38.9 91.3 92.6m-544 92.6c-79.2 0-146-64.6-146-144 0-79.3 66.7-144 146-144 43.9 0 75.1 17.2 98.6 39.7l-27.7 27.7c-16.8-15.8-39.6-28.1-70.9-28.1-57.9 0-103 46.7-103 104 0 57.9 45.3 104 103 104 37.5 0 58.9-15.1 72.6-28.8 11.2-11.2 18.6-27.4 21.4-49.5h-94v-39.3h132c1.4 7 2.1 15.4 2.1 24.5 0 29.5-8.1 66-34 91.9-25.2 26.5-57.5 40.6-100 40.6" fill="#5f6368" fill-rule="evenodd"/> */}
                 {/* <path d="M1249.14 1725.74v-241.806h31.228l83.978 147.278h1.266l83.978-147.278h31.228v241.806H1449.6l1.266-183.992h-1.266l-75.538 132.508h-18.146l-75.538-132.508h-1.266c2.304 61.2 1.266 122.802 1.266 183.992zm329.16 4.22c-17.724 0-32.072-5.064-43.888-15.192s-17.724-23.632-17.724-40.1c0-18.146 7.174-32.072 21.1-42.2s31.228-15.192 51.484-15.192c18.146 0 33.338 3.376 44.732 10.128-.303-35.1-24.56-44.732-43.466-44.732-17.85.848-33.338 8.313-39.668 24.054l-28.274-12.238c3.798-9.706 11.394-19 22.788-27.43s26.164-12.66 44.732-12.66c21.1 0 38.824 6.33 52.75 18.568s21.1 29.962 21.1 52.328v100.014h-29.54v-22.788c-13.8 17.302-32.452 27.05-56.126 27.43zm55.704-76.804c-18.188-13.842-56.126-15.572-73.85-1.266-13.926 13.504-15.403 31.608-.844 42.2 35.195 22.577 75.96-12.576 74.694-40.934zm151.076 76.804c-12.66 0-24.054-2.532-33.76-8.018s-17.302-12.238-22.366-20.256h-1.688l1.266 22.788v73.006h-30.806v-238.43h29.54v22.788h1.266c5.064-8.018 12.238-14.77 22.366-20.256s21.522-8.018 33.76-8.018c21.522 0 39.668 8.44 55.282 25.32s23.2 37.98 23.2 62.878-7.596 45.998-23.2 62.878c-15.192 16.88-33.76 25.32-54.86 25.32zm-5.064-28.696c14.348 0 26.586-5.486 37.136-16.458s15.614-25.32 15.614-43.466-5.064-32.494-15.614-43.466-22.788-16.458-37.136-16.458c-14.77 0-27.008 5.486-37.136 16.036-10.128 10.972-15.192 25.32-15.192 43.466s5.064 32.916 15.192 43.466c10.128 11.816 22.366 16.88 37.136 16.88zm173.864 28.696c-18.568 0-33.76-4.642-45.576-13.504-12.238-8.862-20.678-20.256-26.586-33.76l27.852-11.394c8.862 20.678 23.632 31.228 44.732 31.228 9.706 0 17.724-2.1 23.632-6.33 6.33-4.22 9.284-9.706 9.284-16.88 0-10.972-7.596-18.146-22.788-21.944l-33.338-8.018c-10.55-2.532-20.678-8.018-29.962-15.192s-14.348-17.724-14.348-30.384c0-14.77 6.33-26.586 19.412-35.448 13.082-9.284 28.274-13.504 45.998-13.504 14.77 0 27.852 3.376 39.246 10.128s19.834 16.036 24.476 28.696l-27.008 10.972c-5.908-14.77-18.568-21.944-37.98-21.944-9.284 0-16.88 2.1-23.2 5.908s-9.284 8.862-9.284 15.614c0 9.284 7.174 16.036 21.944 19.412l32.916 7.596c15.614 3.798 27.008 9.706 34.604 18.568s10.972 18.568 10.972 29.54c0 14.77-5.908 27.43-18.146 37.136-11.816 8.44-27.43 13.504-46.842 13.504z" fill="#63666a"/> */}
-                <path d="M831 909.9c37.9 47.4 76.5 107 96.7 143 24.6 46.8 34.8 78.4 53.1 135 10.7 31 20.9 40.4 42.3 40.4 23.4 0 34.1-15.8 42.3-40.4 17.1-53.1 30.3-93.5 51.2-132 80.6-152 212-260 286-408 0 0 48.7-90.4 48.7-217 0-118-48-200-48-200l-572 680z" fill="#34a853"/><path d="M637 631.9c46.1 105 134 197 194 278l318-377s-44.9 58.8-126 58.8c-90.4 0-164-72-164-163 0-62.6 37.3-106 37.3-106-234 34.8-221 91.5-260 309z" fill="#fbbc04"/>
+                <path d="M831 909.9c37.9 47.4 76.5 107 96.7 143 24.6 46.8 34.8 78.4 53.1 135 10.7 31 20.9 40.4 42.3 40.4 23.4 0 34.1-15.8 42.3-40.4 17.1-53.1 30.3-93.5 51.2-132 80.6-152 212-260 286-408 0 0 48.7-90.4 48.7-217 0-118-48-200-48-200l-572 680z" fill="#34a853"/>
+                <path d="M637 631.9c46.1 105 134 197 194 278l318-377s-44.9 58.8-126 58.8c-90.4 0-164-72-164-163 0-62.6 37.3-106 37.3-106-234 34.8-221 91.5-260 309z" fill="#fbbc04"/>
                 <path d="M1153 19.6c106 34.1 196 106 250 211l-254 303s37.3-43.6 37.3-106c0-92.9-78.4-163-163-163-80.3 0-126 58.1-126 58.1 19.5-44.4 221-288 256-303z" fill="#4285f4"/>
                 <path d="M695 152.9c63.2-75.2 174-153 327-153 73.9 0 130 19.6 130 19.6l-255 303c-17.2-9.33-185-140-202-170z" fill="#1a73e8"/>
                 <path d="M637 631.9s-41.7-82.8-41.7-202c0-113 44.2-212 100-276l202 170-260 308z" fill="#ea4335"/>
@@ -84,6 +125,25 @@ const Contact=()=> {
               </SvgIcon >
             </IconButton>
             <Typography >Nuremberg, Germany</Typography>
+          </Stack>
+          </Stack>
+        </Grid>
+        <Grid item>
+          <Stack direction="row" justifyContent="center" alignItems="center" spacing={1} paddingLeft={3}>
+            <Stack direction="row" justifyContent="center" alignItems="center" spacing={0}>
+              <Typography variant="caption">Made with React </Typography>
+              <SvgIcon fontSize={icon_size}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3">
+                  <g fill="#61DAFB">
+                    <path d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z"/>
+                    <circle cx="420.9" cy="296.5" r="45.7"/>
+                    <path d="M520.5 78.1z"/>
+                  </g>
+                </svg>
+              </SvgIcon>
+            </Stack>
+            <Typography>&</Typography>
+            <FavoriteIcon color='love_red' />
           </Stack>
         </Grid>
       </Grid>
