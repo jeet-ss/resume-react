@@ -32,7 +32,7 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
-    id: nanoid(),
+    id: '1',
     img: 'img/Bagnet_img.png',
     title: 'Visual Attention Mechanism on BagNets architecture',
     institute: 'FAU, Erlangen',
@@ -44,7 +44,7 @@ export const projectsData = [
     tags: ['ML', 'Computer Vision'],
   },
   {
-    id: nanoid(),
+    id: '2',
     img: 'img/showTell_img.png',
     title: 'Image Captioning Using Deep Learning',
     institute: 'VECC, Kolkata',
@@ -56,9 +56,9 @@ export const projectsData = [
     tags: [ 'ML','Img2Seq', ]
   },
   {
-    id: nanoid(),
+    id: '3',
     img: 'img/Peshwar_img1.jpg',
-    title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
+    title: 'Periscopic Exploration for Shallow Water Amphibian Robot',
     institute: 'CSIR-CMERI, Durgapur',
     prof: 'Dr. Sarbari Dutta, Rudra Pratap Chatterjee',
     info: '15 May 2017 - 18 Jul 2017 ',
@@ -68,7 +68,7 @@ export const projectsData = [
     tags: ['Robotics', 'Optics'],
   },
   {
-    id: nanoid(),
+    id: '4',
     img: 'img/Peshwar_img1.jpg',
     title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
     institute: 'CSIR-CMERI, Durgapur',
@@ -80,7 +80,7 @@ export const projectsData = [
     tags: [],
   },
   {
-    id: nanoid(),
+    id: '5',
     img: 'img/Peshwar_img1.jpg',
     title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
     institute: 'CSIR-CMERI, Durgapur',
@@ -92,7 +92,7 @@ export const projectsData = [
     tags: [],
   },
   {
-    id: nanoid(),
+    id: '6',
     img: 'img/Peshwar_img1.jpg',
     title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
     institute: 'CSIR-CMERI, Durgapur',

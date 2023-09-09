@@ -1,5 +1,5 @@
-import {  Grid, Stack,Box ,Typography, Divider, LinearProgress  } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import {  Grid, Stack,Box ,Typography, Divider, LinearProgress, linearProgressClasses  } from '@mui/material';
+import { useTheme, styled } from '@mui/material/styles';
 import React  from 'react'
 
 const skill_ml = [ 
@@ -80,9 +80,30 @@ const skill_cloud = [
         value: 55,
     },]
 
+
 const demoArr = [ {title:"Machine Learning Tools", arr:skill_ml}, {title: "BackEnd Development",arr:skill_back},  {title: "FrontEnd Development",arr:skill_front}, {title:"Cloud Development ", arr:skill_cloud} ]
+
+const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+    height: 20,
+    borderRadius: 8,
+    backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 300 : 800],
+    
+    // [`&.${linearProgressClasses.colorPrimary}`]: {
+    //   backgroundColor: theme.palette.grey[100],
+    // },
+    // [`&.${linearProgressClasses}`]: {
+    //     backgroundColor: 'inherit',
+    //   },
+    [`& .${linearProgressClasses.bar}`]: {
+      borderRadius: 8,
+      //backgroundColor: theme.palette.mode === 'light' ? '#308fe8' : '#308fe8',
+      
+    },
+  }));
+
 const Skills=() => {
   const theme = useTheme(); 
+  
   return (
     <Grid  container sx={{ 
         //height: 350,  
@@ -108,7 +129,15 @@ const Skills=() => {
                     {itm.arr.map((it, ix) => 
                         <Stack orientation="column" key={ix}>
                             <Typography>{it.name}</Typography>
-                            <LinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'inherit':(ix+idx)%3===0?'success':'secondary'} />
+                            {/* <BorderLinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'inherit':(ix+idx)%3===0?'success':'secondary'} /> */}
+                            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                <Box sx={{ width: '100%', mr: 1 }}>
+                                <BorderLinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'phone_blue':(ix+idx)%3===0?'success':'secondary'} />
+                                </Box>
+                                <Box sx={{ minWidth: 35 }}>
+                                    <Typography variant="body2" >{`${Math.round(it.value)}%`}</Typography>
+                                </Box>
+                            </Box>                            
                         </Stack>
                     )}
                 </Stack>

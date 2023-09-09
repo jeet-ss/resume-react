@@ -1,5 +1,5 @@
 
-import {Grid, Typography, Card, Chip, CardMedia, CardHeader, CardContent, IconButton, CardActions, Collapse,  Stack, Divider,  } from '@mui/material';
+import {Grid, Typography, Card, Chip, CardMedia, CardHeader, CardContent, IconButton, CardActions, Collapse,  Stack, Divider, Accordion } from '@mui/material';
 import { useTheme, styled } from '@mui/material/styles';
 import React from 'react'
 
@@ -11,9 +11,10 @@ import { projectsData } from '../../data/data';
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  
+  return ( <IconButton {...other} /> );
+})(({ theme, expanded }) => ({
+  transform: !expanded ? 'rotate(0deg)' : 'rotate(180deg)',
   marginLeft: 'auto',
   // transition: theme.transitions.create('transform', {
   //   duration: theme.transitions.duration.shortest,
@@ -23,18 +24,15 @@ const ExpandMore = styled((props) => {
 
 const Project = ()  => {
   const theme = useTheme();
-  const [expanded, setExpanded] = React.useState(false);
+  const [activeIndex, setActiveIndex] = React.useState(0);
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-    
+  
   return (
     <Grid container   sx={{ 
       //maxHeight: 350,  
       bgcolor: `${theme.palette.primary.white}`,
-      //textAlign: 'center',
-      overflow: 'hidden',
+      textAlign: 'center',
+      overflow: 'auto',
       //overflowX: 'scroll',
       //minWidth: 0,
 
@@ -47,12 +45,13 @@ const Project = ()  => {
         
       </Grid>
       
-      <Grid item container direction={{ xs:"column", md:"row" }} rowSpacing={1} columnSpacing={3}  padding={2} alignItems="center" justifyContent="space-between">
+      <Grid item container direction={{ xs:"column", md:"row" }}  rowSpacing={1} columnSpacing={3}  padding={2} alignItems="center" justifyContent="space-between">
         {projectsData.map((itm, idx)=> {
           //console.log('in Projects')
+          
            return(
           <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card sx={{ maxWidth: 450, minWidth:250 }}  >
+            <Card sx={{ width:'80%', height:'100%', overflow:'hidden' }}  >
               <CardHeader title={itm.title} subheader={itm.info} />
               <CardMedia component="img" height="140" src={process.env.PUBLIC_URL  + `${itm.img}`} alt="green iguana" />
               <CardContent>
@@ -72,23 +71,22 @@ const Project = ()  => {
                       itm.tags.map((it, ix) =>
                       <Chip label={it} key={ix} size="small" />
                       )}
-                  </Stack>
+                </Stack>
                 <ExpandMore
-                  expand={expanded}
-                  onClick={handleExpandClick}
-                  aria-expanded={expanded}
+                  expand={activeIndex === itm.id}
+                  onClick={() => {activeIndex===itm.id ? setActiveIndex(0) : setActiveIndex(itm.id)}}
+                  aria-expanded={activeIndex === itm.id}
                   aria-label="show more"
                 >
                   <ExpandMoreIcon />
                 </ExpandMore>
               </CardActions>
-              <Collapse in={expanded} timeout="auto" >
+              <Collapse in={activeIndex === itm.id} timeout="auto" >
                 <CardContent>
                   <Typography paragraph>Description:</Typography>
                   <Typography variant="body2" >{itm.info2}</Typography>
                 </CardContent>
               </Collapse>
-
             </Card>
           </Grid>  
         )})}

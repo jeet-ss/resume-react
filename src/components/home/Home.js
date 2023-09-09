@@ -29,7 +29,7 @@ const Home = ()  => {
           //textAlign: 'center',
           overflow: 'auto',
           
-          }} direction="row" alignContent="center" justifyContent="center" spacing={3} padding={2} >
+          }} direction="row" alignContent="center" justifyContent="center" spacing={3} padding={5} >
             <Grid item>
               <img src={process.env.PUBLIC_URL+'img/profile.jpg'} height={200} width={200} alt='my pic' />
             </Grid>
