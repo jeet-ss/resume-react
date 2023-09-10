@@ -7,8 +7,10 @@ import { Paper, } from '@mui/material';
 import Home from '../home/Home';
 import About from '../about/About';
 import Experience from '../experience/Experience';
+import Education from '../education/Education';
 import Project from '../projects/Project';
 import Skills from '../../skills/Skills';
+import Others from '../others/Others';
 import Comments from '../comments/Comments';
 import Contact from '../contact/Contact';
 
@@ -69,7 +71,9 @@ function App() {
         <About />
         <Experience />
         <Project  />
+        <Education />
         <Skills />
+        <Others />
         <Comments />
         <Contact/>
       </ThemeProvider>

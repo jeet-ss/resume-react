@@ -2,7 +2,7 @@ import { Paper, Grid, Stack, Typography, Chip, Divider,  } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 import { Timeline, TimelineItem, TimelineContent, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineDot, timelineContentClasses} from '@mui/lab';
-import { SdRounded, TextIncrease } from '@mui/icons-material';
+
 
 const listData = [
     {   id: "1",
@@ -55,20 +55,24 @@ function Experience() {
     <Grid  container sx={{  
         //  height: 350,  
         bgcolor: `${theme.palette.primary.light}`, 
-        //color: `${theme.palette.primary.contrastText}`, 
-        overflow: 'hidden',
+        color: `${theme.palette.primary.contrastText}`, 
+        overflow: 'auto',
         
         
-        }} direction="row" alignContent="center" justifyContent="center" spacing={{ xs: 2, md: 3 }} padding={4} >
-
+        }} direction="column" alignContent="center" justifyContent="center" spacing={{ xs: 2, md: 3 }} padding={{xs:0, md:2}} >
+        
         <Grid item>
             <Stack direction="column" alignContent="center" justifyContent="center" >
                 <Typography variant="h3" sx={{ textAlign: 'center' , color: `${theme.palette.primary.contrastText}`}} > Work Experience</Typography>
                 <Divider variant="middle" orientation="horizontal" />
+            </Stack>
+        </Grid>
+        <Grid item sx={{ marginBottom:4, contain:'layout' }}>
+            
             <Timeline position="alternate" >
                 { listData.map((itm, idx) => 
                 <TimelineItem key={idx} >
-                <TimelineOppositeContent sx={{ py:6}} >
+                <TimelineOppositeContent sx={{ py:9}} >
                     <Typography variant="subtitle1" >
                         {itm.date}
                     </Typography>
@@ -79,6 +83,7 @@ function Experience() {
                     <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent >
+                    {/* <Paper elevation={4} sx={{ bgcolor:`${theme.palette.primary.main}`, padding:1,}}> */}
                     <Typography variant='h5'>
                         {itm.label}
                     </Typography>
@@ -88,14 +93,15 @@ function Experience() {
                     </Typography>
                     <Stack direction="row" justifyContent={ idx%2===0?"flex-start":"flex-end"} >
                         { itm.tags.map((chipItem, idn) => 
-                            <Chip label={chipItem} key={idn} />
+                            <Chip label={chipItem} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
                         )}
                     </Stack>
+                    {/* </Paper> */}
                 </TimelineContent>                  
             </TimelineItem>
                 )}
             </Timeline>
-            </Stack>
+            
         </Grid>
         {/* <Grid item>
             <Divider orientation={ isDesktop?"vertical":"horizontal"}  />

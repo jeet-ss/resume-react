@@ -94,7 +94,7 @@ export const projectsData = [
   {
     id: '6',
     img: 'img/Peshwar_img1.jpg',
-    title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
+    title: 'Periscopic Exploration for Shallow Water Amphibian Robot',
     institute: 'CSIR-CMERI, Durgapur',
     prof: 'Dr. Sarbari Dutta, Rudra Pratap',
     info: '15 May 2017 - 18 Jul 2017 ',
@@ -137,6 +137,121 @@ export const footerData = {
     },
   ],
 };
+
+const skill_ml = [ 
+  {
+      name:"Python",
+      value: 90,
+  },
+  {
+      name:"Pytorch",
+      value: 70,
+  },
+  {
+      name:"Ray tune",
+      value: 30,
+  },
+  {
+      name:"Lightning",
+      value: 50,
+  },
+  ]
+
+const skill_front = [
+  {
+      name:"Javascript",
+      value: 30,
+  },
+  {
+      name:"Typescript",
+      value: 30,
+  },
+  {
+      name:"Svelte",
+      value: 30,
+  },
+  {
+      name:"React",
+      value: 30,
+  },
+]
+const skill_back = [
+  {
+      name:"Java",
+      value: 10,
+  },
+  
+  {
+      name:"C++",
+      value: 50,
+  },
+  {
+      name:"MatLAB",
+      value: 98,
+  },
+  
+  {
+      name:"Springboot",
+      value: 25,
+  },  
+  
+]
+const skill_cloud = [
+  {
+      name:"Linux",
+      value: 70,
+  },
+  
+  {
+      name:"Docker",
+      value: 50,
+  },
+  {
+      name:"Collab",
+      value: 40,
+  },
+  
+  {
+      name:"Aws",
+      value: 55,
+  },]
+
+export const schoolData = [
+    
+    {
+        id: 1,
+        title: 'Calcutta Airport English High School',
+        degree: 'Secondary school',
+        marks: 'Marks 92%',
+        year:'2014',
+        value: 70,
+        abc: "50%",
+        a2: "90"
+    },
+    {
+        id: 2,
+        title: 'National Institute of Technology, Durgapur, India',
+        degree: 'Bachelor of Technology in Electronics and Communication Engineering',
+        marks: 'CGPA 9.1',
+        year:'2019',
+        value: 80,
+        abc: "75%",
+        a2: "50"
+    },
+    {
+        id: 3,
+        title: 'Friedrich-Alexander Universität, Erlangen-Nürnberg, Germany',
+        degree: 'Master of Science in Artificial Intelligence',
+        marks: 'GPA 1.7',
+        year:'2023',
+        value: 90,
+        abc: "100%",
+        a2: "10"
+    },
+]
+
+export const skillsData = [ {title:"Machine Learning Tools", arr:skill_ml}, {title: "BackEnd Development",arr:skill_back},  {title: "FrontEnd Development",arr:skill_front}, {title:"Cloud Development ", arr:skill_cloud} ]
+export const pdata = [ {arr:schoolData},]
 
 // Github start/fork buttons
 export const githubButtons = {

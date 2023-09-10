@@ -10,8 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import { projectsData } from '../../data/data';
 
 const ExpandMore = styled((props) => {
-  const { expand, ...other } = props;
-  
+  const { expand, tits, ...other } = props;
   return ( <IconButton {...other} /> );
 })(({ theme, expanded }) => ({
   transform: !expanded ? 'rotate(0deg)' : 'rotate(180deg)',
@@ -45,14 +44,14 @@ const Project = ()  => {
         
       </Grid>
       
-      <Grid item container direction={{ xs:"column", md:"row" }}  rowSpacing={1} columnSpacing={3}  padding={2} alignItems="center" justifyContent="space-between">
+      <Grid item container direction={{ xs:"column", md:"row" }}  rowSpacing={1} columnSpacing={5}  padding={2} alignItems="center" justifyContent="space-between">
         {projectsData.map((itm, idx)=> {
           //console.log('in Projects')
           
            return(
-          <Grid item xs={12} sm={6} md={4} key={idx}>
-            <Card sx={{ width:'80%', height:'100%', overflow:'hidden' }}  >
-              <CardHeader title={itm.title} subheader={itm.info} />
+          <Grid item xs={12} sm={4} md={4} key={idx}  >
+            <Card sx={{ display:'block',  height:'100%', overflow:'hidden', textOverflow:'ellipsis' }}  >
+              <CardHeader title={itm.title} subheader={itm.info} sx={{ textOverflow:'clip'}} />
               <CardMedia component="img" height="140" src={process.env.PUBLIC_URL  + `${itm.img}`} alt="green iguana" />
               <CardContent>
                 <Typography variant='body1'  >@{itm.institute}</Typography>
@@ -74,6 +73,7 @@ const Project = ()  => {
                 </Stack>
                 <ExpandMore
                   expand={activeIndex === itm.id}
+                  tits = {itm.info2}
                   onClick={() => {activeIndex===itm.id ? setActiveIndex(0) : setActiveIndex(itm.id)}}
                   aria-expanded={activeIndex === itm.id}
                   aria-label="show more"
