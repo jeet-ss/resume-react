@@ -2,7 +2,8 @@ import { Divider, Grid, Rating, Stack, SvgIcon, Typography  } from '@mui/materia
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 
-import { BookIcon, CricketIcon, SpaceIcon, SwimIcon, TrekIcon, FluteIcon, PianoIcon, GuitarIcon, MicIcon } from '../../images/SvgImages';
+import { BookIcon, CricketIcon, SpaceIcon, SwimIcon, TrekIcon, FluteIcon, PianoIcon, GuitarIcon, MicIcon, BrainIcon } from '../../images/SvgImages';
+
 
 
 const langArr = [
@@ -54,19 +55,37 @@ const Others = () => {
         <Grid item>
             <Stack direction="column" spacing={3}>
                 <Typography variant='h5'> Hobbies </Typography>
-                <Divider variant="fullWidth" orientation="horizontal" />
-                <Grid item container spacing={3}>
-                    <Grid item>
+                <Divider variant="middle" orientation="horizontal" />
+                <Grid item container columnSpacing={0} rowSpacing={2} columns={{ xs: 3, md:3 }}>
+                    <Grid item xs={1} md={1}>
                         <BookIcon />
                     </Grid>
-                    <Grid item>
-                        <CricketIcon />
+                    <Grid item xs={1} md={1}>
+                        <BrainIcon />
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={1} md={1} >
                         <SpaceIcon />
                     </Grid>
-                    <Grid item>
+                    <Grid item xs={1} md={1}>
                         <SwimIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1}>
+                        <CricketIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1} >
+                        <TrekIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1} >
+                        <GuitarIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1}>
+                        <FluteIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1}>
+                        <PianoIcon />
+                    </Grid>
+                    <Grid item xs={1} md={1}>
+                        <MicIcon />
                     </Grid>
                 </Grid>
             </Stack>
