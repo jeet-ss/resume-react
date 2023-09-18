@@ -2,7 +2,7 @@ import { Divider, Grid, Rating, Stack, SvgIcon, Typography  } from '@mui/materia
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 
-import { BookIcon, CricketIcon } from '../../images/SvgImages';
+import { BookIcon, CricketIcon, SpaceIcon, SwimIcon, TrekIcon, FluteIcon, PianoIcon, GuitarIcon, MicIcon } from '../../images/SvgImages';
 
 
 const langArr = [
@@ -61,6 +61,12 @@ const Others = () => {
                     </Grid>
                     <Grid item>
                         <CricketIcon />
+                    </Grid>
+                    <Grid item>
+                        <SpaceIcon />
+                    </Grid>
+                    <Grid item>
+                        <SwimIcon />
                     </Grid>
                 </Grid>
             </Stack>

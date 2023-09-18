@@ -1,4 +1,4 @@
-import { Grid, Stack, Typography  } from '@mui/material';
+import { Grid, Stack, Typography, Avatar  } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 
@@ -31,7 +31,8 @@ const Home = ()  => {
           
           }} direction="row" alignContent="center" justifyContent="center" spacing={3} padding={5} >
             <Grid item>
-              <img src={process.env.PUBLIC_URL+'img/profile.jpg'} height={200} width={200} alt='my pic' />
+              {/* <img src={process.env.PUBLIC_URL+'img/profile.jpg'} height={200} width={200} alt='my pic' /> */}
+              <Avatar src={process.env.PUBLIC_URL+'img/profile.jpg' } sx={{ width: 200, height: 200, boxShadow: 4  }} alt='Jeet' >JSS</Avatar>
             </Grid>
             <Grid item className='home-title'> 
               <Stack direction="column">
