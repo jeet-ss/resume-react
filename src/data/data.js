@@ -32,7 +32,7 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
-    id: '1',
+    id: 3,
     img: 'img/Bagnet_img.png',
     title: 'Visual Attention Mechanism on BagNets architecture',
     institute: 'FAU, Erlangen',
@@ -44,7 +44,7 @@ export const projectsData = [
     tags: ['ML', 'Computer Vision'],
   },
   {
-    id: '2',
+    id: 2,
     img: 'img/showTell_img.png',
     title: 'Image Captioning Using Deep Learning',
     institute: 'VECC, Kolkata',
@@ -56,7 +56,7 @@ export const projectsData = [
     tags: [ 'ML','Img2Seq', ]
   },
   {
-    id: '3',
+    id: 1,
     img: 'img/Peshwar_img1.jpg',
     title: 'Periscopic Exploration for Shallow Water Amphibian Robot',
     institute: 'CSIR-CMERI, Durgapur',
@@ -68,41 +68,19 @@ export const projectsData = [
     tags: ['Robotics', 'Optics'],
   },
   {
-    id: '4',
+    id: 4,
     img: 'img/Peshwar_img1.jpg',
-    title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
-    institute: 'CSIR-CMERI, Durgapur',
-    prof: 'Dr. Sarbari Dutta, Rudra Pratap',
-    info: '15 May 2017 - 18 Jul 2017 ',
-    info2: 'I was involved in the designing of a periscopic device to enhance the visibility of an Amphibian Robot which was used to solve the turbidity problem in shallow underwater condition during exploration at CSIR-CMERI, Durgapur.',
+    title: 'Mini-SPICE',
+    institute: 'FAU, Erlangen',
+    prof: 'Prof. Dr. Meinard Müller',
+    info: '10 April 2023 - 10 Oct 2023 ',
+    info2: 'Fundamental Frequency estimation using Mini Spice',
     url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
     repo: '', // if no repo, the button will not show up
     tags: [],
   },
-  {
-    id: '5',
-    img: 'img/Peshwar_img1.jpg',
-    title: 'Periscopic Exploration for Shallow Water Amphibian Robot (PEShWAR)',
-    institute: 'CSIR-CMERI, Durgapur',
-    prof: 'Dr. Sarbari Dutta, Rudra Pratap',
-    info: '15 May 2017 - 18 Jul 2017 ',
-    info2: 'I was involved in the designing of a periscopic device to enhance the visibility of an Amphibian Robot which was used to solve the turbidity problem in shallow underwater condition during exploration at CSIR-CMERI, Durgapur.',
-    url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
-    repo: '', // if no repo, the button will not show up
-    tags: [],
-  },
-  {
-    id: '6',
-    img: 'img/Peshwar_img1.jpg',
-    title: 'Periscopic Exploration for Shallow Water Amphibian Robot',
-    institute: 'CSIR-CMERI, Durgapur',
-    prof: 'Dr. Sarbari Dutta, Rudra Pratap',
-    info: '15 May 2017 - 18 Jul 2017 ',
-    info2: 'I was involved in the designing of a periscopic device to enhance the visibility of an Amphibian Robot which was used to solve the turbidity problem in shallow underwater condition during exploration at CSIR-CMERI, Durgapur.',
-    url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
-    repo: '', // if no repo, the button will not show up
-    tags: [],
-  },
+  
+  
 ];
 
 // CONTACT DATA

@@ -45,7 +45,7 @@ const Project = ()  => {
       </Grid>
       
       <Grid item container direction={{ xs:"column", md:"row" }}  rowSpacing={1} columnSpacing={5}  padding={2} alignItems="center" justifyContent="space-between">
-        {projectsData.map((itm, idx)=> {
+        {projectsData.sort((a,b)=>a.id<b.id?1:-1).map((itm, idx)=> {
           //console.log('in Projects')
           
            return(

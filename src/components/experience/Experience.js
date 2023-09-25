@@ -9,32 +9,48 @@ const listData = [
     {   id: 1,
         label: "Application Developer",
         date: "7 Aug 2019 - 29 Oct 2020",
-        content:"Comviva", 
+        content:"Comviva, Bangalore, India", 
         description: "End-to-End Development of Web Applications",
-        tags: [ { title:"Java", icon:<BookIcon /> },{ title:"React", icon:<GuitarIcon /> },{ title:"React", icon:<GuitarIcon /> },  ],
+        tags: [ { title:"Java", icon:<BookIcon /> },{ title:"React", icon:<GuitarIcon /> },{ title:"SpringFramework", icon:<GuitarIcon /> }, ],
     },
     {   
         id:2,
-        label: "Job Position B",
-        date: "01.01.2023 - 02.02.2024",
-        content: "Company B", 
-        description:"content a content a content a content a content a",
-        tags: [ { title:"React", icon:<PianoIcon /> },{ title:"Material", icon:<BookIcon /> }],
+        label: "Web Developer | WerkStudent",
+        date: "1 Jun 2021 - 30 Nov 2021",
+        content: "Lehrstuhl für Ressourcen- und Energieeffiziente Produktionsmaschinen, FAU, Nürnberg, Germany", 
+        description:"Development of Website for sharing among industrial firms",
+        tags: [ { title:"React", icon:<PianoIcon /> },{ title:"Material UI", icon:<BookIcon /> }, { title:"TypeScript", icon:<BookIcon /> }],
     },
     {   
         id:3,
-        label: "Job Position C",
-        date: "01.01.2023 - 02.02.2024",
-        content: "Company B", 
-        description: "content c content c content c content c content c",
-        tags: [ { title:"React", icon:<GuitarIcon /> },{ title:"Material", icon:<PianoIcon /> }],
+        label: "Teaching Asistant for Computer Vision | WerkStudent",
+        date: "14 Apr 2022 - 31 Jul 2022",
+        content: "Lehrstuhl für Informatik 5, FAU, Erlangen, Germany", 
+        description: "I was in charge of the exercises for the Summer Semester 22",
+        tags: [ { title:"Python", icon:<GuitarIcon /> },{ title:"OpenCV", icon:<PianoIcon /> }],
     },{   
         id:4,
-        label: "Job Position D",
-        date: "01.01.2023 - 02.02.2024",
-        content: "Company D", 
-        description: "content d content d content d content d content d",
-        tags: [ { title:"React", icon:<BookIcon /> },{ title:"Material", icon:<BookIcon /> }],
+        label: "Teaching Assistant in Algorithms and Programming | WerkStudent",
+        date: "1 Oct 2022 - 31 Mar 2023",
+        content: "Professur für Image Data Exploration and Analysis, FAU, Erlangen, Germany", 
+        description: "I was conducting the exercises for the semester in python",
+        tags: [ { title:"Python", icon:<BookIcon /> },{ title:"MS Office", icon:<BookIcon /> }],
+    },
+    {   
+        id:5,
+        label: "Research Intern | WerkStudent",
+        date: "1 Jan 2023 - 31 June 2023",
+        content: "Fraunhofer IIS, Nürnberg, Germany", 
+        description: "Designing  Quantum compilers using deep reinforcement learning at Self Learning Systems group",
+        tags: [ { title:"PyTorch", icon:<BookIcon /> },{ title:"Qiskit", icon:<BookIcon /> }],
+    },
+    {   
+        id:6,
+        label: "Research Intern | WerkStudent",
+        date: "1 Aug 2023 - Ongoing",
+        content: "International AudioLabs, Erlangen, Germany", 
+        description: "Transcriptions of Piano music using Deep Learning",
+        tags: [ { title:"PyTorch", icon:<BookIcon /> } ],
     }
 ]
 
@@ -93,10 +109,10 @@ function Experience() {
                         {itm.description}
                     </Typography>
                     {/* <Stack direction="row" justifyContent={ idx%2===0?"flex-start":"flex-end"} > */}
-                    <Grid item container rows={1} >
+                    <Grid item container justifyContent={ idx%2===0?"flex-start":"flex-end"} >
 
                         { itm.tags.map((chipItem, idn) => 
-                        <Grid item key={idn}>
+                        <Grid item key={idn} >
                             <Chip avatar={<Avatar alt={chipItem.title}>{chipItem.icon} </Avatar>} label={chipItem.title} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
                             </Grid>
                         )}
