@@ -1,39 +1,40 @@
-import { Paper, Grid, Stack, Typography, Chip, Divider,  } from '@mui/material';
+import { Paper, Grid, Stack, Typography, Chip, Divider, Avatar,  } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 import { Timeline, TimelineItem, TimelineContent, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineDot, timelineContentClasses} from '@mui/lab';
 
+import { BookIcon, GuitarIcon, PianoIcon } from '../../images/SvgImages';
 
 const listData = [
-    {   id: "1",
-        label: "Job Position A",
-        date: "01.01.2023 - 02.02.2024",
-        content:"Company A", 
-        description: "content a content a content a content a content a",
-        tags: [ "React", "Material"],
+    {   id: 1,
+        label: "Application Developer",
+        date: "7 Aug 2019 - 29 Oct 2020",
+        content:"Comviva", 
+        description: "End-to-End Development of Web Applications",
+        tags: [ { title:"Java", icon:<BookIcon /> },{ title:"React", icon:<GuitarIcon /> },{ title:"React", icon:<GuitarIcon /> },  ],
     },
     {   
-        id:"2",
+        id:2,
         label: "Job Position B",
         date: "01.01.2023 - 02.02.2024",
         content: "Company B", 
         description:"content a content a content a content a content a",
-        tags: [ "Java", "Selenium"],
+        tags: [ { title:"React", icon:<PianoIcon /> },{ title:"Material", icon:<BookIcon /> }],
     },
     {   
-        id:"2",
+        id:3,
         label: "Job Position C",
         date: "01.01.2023 - 02.02.2024",
         content: "Company B", 
         description: "content c content c content c content c content c",
-        tags: [ "Pytorch", "Python"],
+        tags: [ { title:"React", icon:<GuitarIcon /> },{ title:"Material", icon:<PianoIcon /> }],
     },{   
-        id:"2",
+        id:4,
         label: "Job Position D",
         date: "01.01.2023 - 02.02.2024",
         content: "Company D", 
         description: "content d content d content d content d content d",
-        tags: [ "C++", "Matlab"],
+        tags: [ { title:"React", icon:<BookIcon /> },{ title:"Material", icon:<BookIcon /> }],
     }
 ]
 
@@ -70,7 +71,7 @@ function Experience() {
         <Grid item sx={{ marginBottom:4, contain:'layout' }}>
             
             <Timeline position="alternate" >
-                { listData.map((itm, idx) => 
+                { listData.sort((a,b)=>a.id<b.id?1:-1).map((itm, idx) => 
                 <TimelineItem key={idx} >
                 <TimelineOppositeContent sx={{ py:9}} >
                     <Typography variant="subtitle1" >
@@ -91,11 +92,16 @@ function Experience() {
                     <Typography variant='body1'>
                         {itm.description}
                     </Typography>
-                    <Stack direction="row" justifyContent={ idx%2===0?"flex-start":"flex-end"} >
+                    {/* <Stack direction="row" justifyContent={ idx%2===0?"flex-start":"flex-end"} > */}
+                    <Grid item container rows={1} >
+
                         { itm.tags.map((chipItem, idn) => 
-                            <Chip label={chipItem} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
+                        <Grid item key={idn}>
+                            <Chip avatar={<Avatar alt={chipItem.title}>{chipItem.icon} </Avatar>} label={chipItem.title} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
+                            </Grid>
                         )}
-                    </Stack>
+                    </Grid>
+                    {/* </Stack> */}
                     {/* </Paper> */}
                 </TimelineContent>                  
             </TimelineItem>

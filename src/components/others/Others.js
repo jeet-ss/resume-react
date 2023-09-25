@@ -56,7 +56,8 @@ const Others = () => {
             <Stack direction="column" spacing={3}>
                 <Typography variant='h5'> Hobbies </Typography>
                 <Divider variant="middle" orientation="horizontal" />
-                <Grid item container columnSpacing={0} rowSpacing={2} columns={{ xs: 3, md:3 }}>
+                <Grid item container columnSpacing={0} rowSpacing={2} columns={{ xs: 3, md:3 }} 
+                    justifyContent="center" alignItems="center">
                     <Grid item xs={1} md={1}>
                         <BookIcon />
                     </Grid>

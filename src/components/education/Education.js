@@ -89,7 +89,7 @@ const Education=() => {
                  <Divider orientation="horizontal" variant="middle" />
              </Stack>
         </Grid>
-        {schoolData.map((it, ix) =>
+        {schoolData.sort((a,b)=>a.id<b.id?1:-1).map((it, ix) =>
           <Grid item key={ix}>
             <Stack direction="column" sx={{ marginBottom:4 }}>
               <Typography variant='body2'>{it.year}</Typography>
