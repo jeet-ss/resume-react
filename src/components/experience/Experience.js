@@ -3,7 +3,7 @@ import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 import { Timeline, TimelineItem, TimelineContent, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineDot, timelineContentClasses} from '@mui/lab';
 
-import { BookIcon, GuitarIcon, PianoIcon } from '../../images/SvgImages';
+import { JavaIcon, ReactIcon, PythonIcon, BookIcon, GuitarIcon, PianoIcon } from '../../images/SvgImages';
 
 const listData = [
     {   id: 1,
@@ -11,7 +11,7 @@ const listData = [
         date: "7 Aug 2019 - 29 Oct 2020",
         content:"Comviva, Bangalore, India", 
         description: "End-to-End Development of Web Applications",
-        tags: [ { title:"Java", icon:<BookIcon /> },{ title:"React", icon:<GuitarIcon /> },{ title:"SpringFramework", icon:<GuitarIcon /> }, ],
+        tags: [ { title:"Java", img:'img/java_logo.png' },{ title:"React", img:'img/react_logo.png' },{ title:"SpringFramework", img:'img/spring_logo_wh.png'}, ],
     },
     {   
         id:2,
@@ -19,7 +19,7 @@ const listData = [
         date: "1 Jun 2021 - 30 Nov 2021",
         content: "Lehrstuhl für Ressourcen- und Energieeffiziente Produktionsmaschinen, FAU, Nürnberg, Germany", 
         description:"Development of Website for sharing among industrial firms",
-        tags: [ { title:"React", icon:<PianoIcon /> },{ title:"Material UI", icon:<BookIcon /> }, { title:"TypeScript", icon:<BookIcon /> }],
+        tags: [ { title:"React", img:'img/react_logo.png' },{ title:"Material UI", img:'img/mui_logo.png'}, { title:"TypeScript", img:'img/Typescript_logo.png'}],
     },
     {   
         id:3,
@@ -27,14 +27,15 @@ const listData = [
         date: "14 Apr 2022 - 31 Jul 2022",
         content: "Lehrstuhl für Informatik 5, FAU, Erlangen, Germany", 
         description: "I was in charge of the exercises for the Summer Semester 22",
-        tags: [ { title:"Python", icon:<GuitarIcon /> },{ title:"OpenCV", icon:<PianoIcon /> }],
-    },{   
+        tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"OpenCV", img:'img/opencv_svg.png' }],
+    },
+    {   
         id:4,
         label: "Teaching Assistant in Algorithms and Programming | WerkStudent",
         date: "1 Oct 2022 - 31 Mar 2023",
         content: "Professur für Image Data Exploration and Analysis, FAU, Erlangen, Germany", 
         description: "I was conducting the exercises for the semester in python",
-        tags: [ { title:"Python", icon:<BookIcon /> },{ title:"MS Office", icon:<BookIcon /> }],
+        tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"MS Office",img:'img/ms_logo_bl.png' }],
     },
     {   
         id:5,
@@ -42,7 +43,7 @@ const listData = [
         date: "1 Jan 2023 - 31 June 2023",
         content: "Fraunhofer IIS, Nürnberg, Germany", 
         description: "Designing  Quantum compilers using deep reinforcement learning at Self Learning Systems group",
-        tags: [ { title:"PyTorch", icon:<BookIcon /> },{ title:"Qiskit", icon:<BookIcon /> }],
+        tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png'},{ title:"Qiskit", img:'img/qiskit_logo.png'}],
     },
     {   
         id:6,
@@ -50,7 +51,7 @@ const listData = [
         date: "1 Aug 2023 - Ongoing",
         content: "International AudioLabs, Erlangen, Germany", 
         description: "Transcriptions of Piano music using Deep Learning",
-        tags: [ { title:"PyTorch", icon:<BookIcon /> } ],
+        tags: [ { title:"PyTorch", img:'img/pytorch_logo_white.png' } ],
     }
 ]
 
@@ -113,7 +114,7 @@ function Experience() {
 
                         { itm.tags.map((chipItem, idn) => 
                         <Grid item key={idn} >
-                            <Chip avatar={<Avatar alt={chipItem.title}>{chipItem.icon} </Avatar>} label={chipItem.title} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
+                            <Chip avatar={<Avatar src={process.env.PUBLIC_URL+`${chipItem.img}`}  alt={chipItem.title} />} label={chipItem.title} key={idn} sx={{ color: `${theme.palette.primary.contrastText}`,}} />
                             </Grid>
                         )}
                     </Grid>

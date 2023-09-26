@@ -56,7 +56,7 @@ const Skills=() => {
                                 <BorderLinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'phone_blue':(ix+idx)%3===0?'success':'secondary'} />
                                 </Box>
                                 <Box sx={{ minWidth: 35 }}>
-                                    <Typography variant="body2" >{`${Math.round(it.value)}%`}</Typography>
+                                    <Typography variant="body2" >{`${it.value/10}/10`}</Typography>
                                 </Box>
                             </Box>                            
                         </Stack>

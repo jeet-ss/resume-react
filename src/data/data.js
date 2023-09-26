@@ -123,7 +123,7 @@ const skill_ml = [
   },
   {
       name:"Pytorch",
-      value: 70,
+      value: 80,
   },
   {
       name:"Ray tune",
@@ -138,39 +138,39 @@ const skill_ml = [
 const skill_front = [
   {
       name:"Javascript",
-      value: 30,
+      value: 90,
   },
   {
       name:"Typescript",
-      value: 30,
+      value: 70,
   },
   {
       name:"Svelte",
-      value: 30,
+      value: 50,
   },
   {
       name:"React",
-      value: 30,
+      value: 80,
   },
 ]
 const skill_back = [
   {
       name:"Java",
-      value: 10,
+      value: 80,
   },
   
   {
       name:"C++",
-      value: 50,
+      value: 60,
   },
   {
-      name:"MatLAB",
-      value: 98,
+      name:"C",
+      value: 90,
   },
   
   {
       name:"Springboot",
-      value: 25,
+      value: 60,
   },  
   
 ]
@@ -182,16 +182,16 @@ const skill_cloud = [
   
   {
       name:"Docker",
-      value: 50,
+      value: 60,
   },
   {
       name:"Collab",
-      value: 40,
+      value: 50,
   },
   
   {
       name:"Aws",
-      value: 55,
+      value: 70,
   },]
 
 export const schoolData = [
