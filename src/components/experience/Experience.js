@@ -51,7 +51,7 @@ const listData = [
         date: "1 Aug 2023 - Ongoing",
         content: "International AudioLabs, Erlangen, Germany", 
         description: "Transcriptions of Piano music using Deep Learning",
-        tags: [ { title:"PyTorch", img:'img/pytorch_logo_white.png' } ],
+        tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' } ],
     }
 ]
 
