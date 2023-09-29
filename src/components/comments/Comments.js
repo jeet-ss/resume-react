@@ -91,7 +91,7 @@ const Comments = () => {
                 '::-webkit-scrollbar': { display: 'none' },
             }}>
           {commentsList.map((itm, idx)=>
-              <Card sx={{ minWidth:285,maxWidth:450  }} orientation="horizontal" key={idx} >
+              <Card sx={{ minWidth:285,maxWidth:450,bgcolor: `${theme.palette.primary.card}`}} orientation="horizontal" key={idx} >
                 <CardHeader 
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }}>

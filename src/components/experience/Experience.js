@@ -73,7 +73,7 @@ function Experience() {
     <Grid  container sx={{  
         //  height: 350,  
         bgcolor: `${theme.palette.primary.light}`, 
-        color: `${theme.palette.primary.contrastText}`, 
+        //color: `${theme.palette.primary.contrastText}`, 
         overflow: 'auto',
         
         

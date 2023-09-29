@@ -38,7 +38,7 @@ const Project = ()  => {
       }} direction="column" alignItems="center" justifyContent="center" rowSpacing={3} columnSpacing={3} padding={3}>
       <Grid item>
         <Stack direction="column">
-          <Typography variant='h3'>My Projects</Typography>
+          <Typography variant='h3' sx={{ color: `${theme.palette.primary.contrastText}`}}>My Projects</Typography>
           <Divider orientation="horizontal" variant="fullWidth"  />
         </Stack>
         
@@ -50,7 +50,7 @@ const Project = ()  => {
           
            return(
           <Grid item xs={12} sm={4} md={4} key={idx}  >
-            <Card sx={{ display:'block',  height:'100%', overflow:'hidden', textOverflow:'ellipsis' }}  >
+            <Card sx={{ display:'block',  height:'100%', overflow:'hidden', textOverflow:'ellipsis', bgcolor: `${theme.palette.primary.card}`, }}  >
               <CardHeader title={itm.title} subheader={itm.info} sx={{ textOverflow:'clip'}} />
               <CardMedia component="img" height="140" src={process.env.PUBLIC_URL  + `${itm.img}`} alt="green iguana" />
               <CardContent>

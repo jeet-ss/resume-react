@@ -24,7 +24,7 @@ const Home = ()  => {
         //       }}>            
         <Grid  container sx={{ 
           minHeight: 350,  
-          bgcolor: `${theme.palette.primary.main}`, 
+          bgcolor: `${theme.palette.primary.dark}`, 
           color: `${theme.palette.primary.contrastText}`, 
           //textAlign: 'center',
           overflow: 'auto',
@@ -32,7 +32,7 @@ const Home = ()  => {
           }} direction="row" alignContent="center" justifyContent="center" spacing={3} padding={5} >
             <Grid item>
               {/* <img src={process.env.PUBLIC_URL+'img/profile.jpg'} height={200} width={200} alt='my pic' /> */}
-              <Avatar src={process.env.PUBLIC_URL+'img/profile.jpg' } sx={{ width: 200, height: 200, boxShadow: 4  }} alt='Jeet' >JSS</Avatar>
+              <Avatar src={process.env.PUBLIC_URL+'img/profile2.jpg' } sx={{ width: 200, height: 200, boxShadow: 4  }} alt='Jeet' >JSS</Avatar>
             </Grid>
             <Grid item className='home-title'> 
               <Stack direction="column">

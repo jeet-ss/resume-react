@@ -79,13 +79,13 @@ const Education=() => {
       <Grid  container sx={{ 
         //height: 350,  
         bgcolor: `${theme.palette.primary.light}`, 
-        color: `${theme.palette.primary.contrastText}`, 
+        //color: `${theme.palette.primary.contrastText}`, 
         textAlign: 'center',
         overflow: 'auto',
       }} direction="column" alignContent="center" justifyContent="center" rowSpacing={4} columnSpacing={3} padding={2} >
         <Grid item>
              <Stack direction="column">
-                 <Typography variant='h4' sx={{ textAlign:'center'}}>Education</Typography>
+                 <Typography variant='h3' sx={{ textAlign:'center',  color: `${theme.palette.primary.contrastText}`}}>Education</Typography>
                  <Divider orientation="horizontal" variant="middle" />
              </Stack>
         </Grid>

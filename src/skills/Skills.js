@@ -33,17 +33,17 @@ const Skills=() => {
         //textAlign: 'center',
         overflow: 'auto',
         
-        }} direction="column" alignContent="center" justifyContent="center" rowSpacing={3} columnSpacing={3} padding={3} >
+        }} direction="column" alignContent="center" justifyContent="center" rowSpacing={3} columnSpacing={3} padding={5} >
         <Grid item>
             <Stack direction="column">
-                <Typography variant='h4' sx={{ textAlign:'center'}}>Skills Acquired</Typography>
+                <Typography variant='h3' sx={{ textAlign:'center',  color: `${theme.palette.primary.contrastText}`}}>Skills Acquired</Typography>
                 <Divider orientation="horizontal" variant="middle" />
             </Stack>
         </Grid>
         <Grid item container direction={{ xs:"column", md:"row" }} alignItems="stretch" justifyContent="space-around" rowSpacing={3} columnSpacing={3} padding={3}>  
         {skillsData.map((itm, idx) =>
             <Grid item key={idx}>
-            <Box sx={{ border: '2px dashed white' , maxWidth:350, minWidth:1, padding:2 }} justifySelf="stretch">
+            <Box sx={{ maxWidth:350, minWidth:1, padding:2 }} justifySelf="stretch">
                 <Stack orientation="column" >
                     <Typography variant="h6" sx={{ textAlign: 'center' }}>{itm.title}</Typography>
                     <Divider orientation="horizontal" variant="fullWidth" />

@@ -1,7 +1,7 @@
 import React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider, alpha } from '@mui/material/styles';
 import { Paper, } from '@mui/material';
-//import { orange } from '@mui/material/colors';
+//import { green, lightGreen, lime, orange, yellow, amber } from '@mui/material/colors';
 
 
 import Home from '../home/Home';
@@ -19,11 +19,12 @@ import Contact from '../contact/Contact';
 const theme = createTheme({
   palette: {
     primary: {
-      light: '#757ce8',
-      main: '#3f50b5',
-      dark: '#002884',
+      light: '#99D5BF',
+      main: '#fafafa',
+      dark:'#579981',
       contrastText: '#fff',
-      white: '#fafafa',
+      white: '#C7E6C9',
+      card: alpha('#80deea', 0.4)
     },
     secondary: {
       light: '#ff7961',

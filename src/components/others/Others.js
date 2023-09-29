@@ -22,14 +22,14 @@ const Others = () => {
     <Grid  container sx={{ 
         minHeight: 350,  
         bgcolor: `${theme.palette.primary.light}`, 
-        color: `${theme.palette.primary.contrastText}`, 
+        //color: `${theme.palette.primary.contrastText}`, 
         //textAlign: 'center',
         overflow: 'auto',
         
         }} direction={{ xs:'column', sm:'row'}} alignContent="center" justifyContent="space-evenly" columnSpacing={5} rowSpacing={6} padding={5} >
         <Grid item>
             <Stack direction="column" spacing={3}>
-                <Typography variant='h5'sx={{  textAlign: 'center' }}> Languages </Typography>
+                <Typography variant='h4'sx={{  textAlign: 'center',  color: `${theme.palette.primary.contrastText}` }}> Languages </Typography>
                 <Divider variant="middle" orientation="horizontal" />
                 <Grid item container columns={4} alignItems="flex-start" justifyContent="space-between" >
                 {langArr.sort((a,b)=>a.id>b.id?1:-1).map((it, ix) => 
@@ -45,7 +45,7 @@ const Others = () => {
         </Grid>
         <Grid item>
             <Stack direction="column" spacing={3}  >
-                <Typography variant='h5' sx={{  textAlign: 'center' }}> Hobbies </Typography>
+                <Typography variant='h4' sx={{  textAlign: 'center',  color: `${theme.palette.primary.contrastText}` }}> Hobbies </Typography>
                 <Divider variant="middle" orientation="horizontal" />
                 <Grid item container columnSpacing={0} rowSpacing={2} columns={3} 
                     justifyContent="center" alignItems="center">
