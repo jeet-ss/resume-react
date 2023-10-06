@@ -7,34 +7,34 @@ import { JavaIcon, ReactIcon, PythonIcon, BookIcon, GuitarIcon, PianoIcon } from
 
 const listData = [
     {   id: 1,
-        label: "Application Developer",
+        label: "Application Developer | FullTime",
         date: "7 Aug 2019 - 29 Oct 2020",
         content:"Comviva, Bangalore, India", 
-        description: "End-to-End Development of Web Applications",
+        description: "End-to-End Development of Web Applications using Micro-Services architecture.",
         tags: [ { title:"Java", img:'img/java_logo.png' },{ title:"React", img:'img/react_logo.png' },{ title:"SpringFramework", img:'img/spring_logo_wh.png'}, ],
     },
     {   
         id:2,
         label: "Web Developer | WerkStudent",
         date: "1 Jun 2021 - 30 Nov 2021",
-        content: "Lehrstuhl für Ressourcen- und Energieeffiziente Produktionsmaschinen, FAU, Nürnberg, Germany", 
-        description:"Development of Website for sharing among industrial firms",
-        tags: [ { title:"React", img:'img/react_logo.png' },{ title:"Material UI", img:'img/mui_logo.png'}, { title:"TypeScript", img:'img/Typescript_logo.png'}],
+        content: "Lehrstuhl für Ressourcen- und Energie effiziente Produktions maschinen, FAU, Nürnberg, Germany", 
+        description:"Development of common platform for sharing of resources among production industries in Germany.",
+        tags: [ { title:"React", img:'img/react_logo.png' },{ title:"Mi UI", img:'img/mui_logo.png'}, { title:"TypeScript", img:'img/Typescript_logo.png'}],
     },
     {   
         id:3,
-        label: "Teaching Asistant for Computer Vision | WerkStudent",
+        label: "TA for Computer Vision | WerkStudent",
         date: "14 Apr 2022 - 31 Jul 2022",
         content: "Lehrstuhl für Informatik 5, FAU, Erlangen, Germany", 
-        description: "I was in charge of the exercises for the Summer Semester 22",
+        description: "Helping students hands on with CV techniques and algorithms in Python during the Summer Semester of 2022",
         tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"OpenCV", img:'img/opencv_svg.png' }],
     },
     {   
         id:4,
-        label: "Teaching Assistant in Algorithms and Programming | WerkStudent",
+        label: "TA in Algorithms and Programming | WerkStudent",
         date: "1 Oct 2022 - 31 Mar 2023",
         content: "Professur für Image Data Exploration and Analysis, FAU, Erlangen, Germany", 
-        description: "I was conducting the exercises for the semester in python",
+        description: "Guiding students in their journey of Algorithms and Programming with Python. ",
         tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"MS Office",img:'img/ms_logo_bl.png' }],
     },
     {   
@@ -42,7 +42,7 @@ const listData = [
         label: "Research Intern | WerkStudent",
         date: "1 Jan 2023 - 31 June 2023",
         content: "Fraunhofer IIS, Nürnberg, Germany", 
-        description: "Designing  Quantum compilers using deep reinforcement learning at Self Learning Systems group",
+        description: "Designing Quantum compilers using deep reinforcement learning at Self Learning Systems group",
         tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png'},{ title:"Qiskit", img:'img/qiskit_logo.png'}],
     },
     {   
@@ -50,7 +50,7 @@ const listData = [
         label: "Research Intern | WerkStudent",
         date: "1 Aug 2023 - Ongoing",
         content: "International AudioLabs, Erlangen, Germany", 
-        description: "Transcriptions of Piano music using Deep Learning",
+        description: "Automatic Transcription of Piano music using Deep Learning",
         tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' } ],
     }
 ]
@@ -105,7 +105,7 @@ function Experience() {
                     <Typography variant='h5'>
                         {itm.label}
                     </Typography>
-                    <Typography variant='h6'>{itm.content}</Typography>                    
+                    <Typography variant='h6' sx={{color: `${theme.palette.primary.contrastText}`}}>{itm.content}</Typography>                    
                     <Typography variant='body1'>
                         {itm.description}
                     </Typography>

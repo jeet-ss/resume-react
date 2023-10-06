@@ -65,7 +65,7 @@ const Project = ()  => {
                 <IconButton href={itm.repo}>
                   <GitHubIcon />
                 </IconButton>}
-                <Stack direction="row" size="small" justifyContent="center">
+                <Stack direction="row" size="small" justifyContent="center" spacing={1}>
                     {itm.tags &&
                       itm.tags.map((it, ix) =>
                       <Chip label={it} key={ix} size="small" />

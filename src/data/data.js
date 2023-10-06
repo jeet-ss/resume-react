@@ -32,6 +32,18 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
+    id: 4,
+    img: 'img/Peshwar_img1.jpg',
+    title: 'Mini-SPICE',
+    institute: 'FAU, Erlangen',
+    prof: 'Prof. Dr. Meinard Müller',
+    info: '10 April 2023 - 10 Oct 2023 ',
+    info2: 'Open Source, PyTorch re-Implemenation, of a State Of the Art model in the field of Fundamental Frequency tracking in Music signals. The original model named SPICE(Self-supervised PItCh Estimation), doesnot require manually annotated data to train whilst achieving SOA accuracy.',
+    url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
+    repo: '', // if no repo, the button will not show up
+    tags: ['PyTorch', 'DL'],
+  },
+  {
     id: 3,
     img: 'img/Bagnet_img.png',
     title: 'Visual Attention Mechanism on BagNets architecture',
@@ -67,18 +79,7 @@ export const projectsData = [
     repo: '', // if no repo, the button will not show up,
     tags: ['Robotics', 'Optics'],
   },
-  {
-    id: 4,
-    img: 'img/Peshwar_img1.jpg',
-    title: 'Mini-SPICE',
-    institute: 'FAU, Erlangen',
-    prof: 'Prof. Dr. Meinard Müller',
-    info: '10 April 2023 - 10 Oct 2023 ',
-    info2: 'Fundamental Frequency estimation using Mini Spice',
-    url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
-    repo: '', // if no repo, the button will not show up
-    tags: [],
-  },
+  
   
   
 ];
