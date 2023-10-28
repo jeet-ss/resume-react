@@ -1,5 +1,5 @@
 
-import {Grid, Typography, Card, Chip, CardMedia, CardHeader, CardContent, IconButton, CardActions, Collapse,  Stack, Divider, Accordion } from '@mui/material';
+import {Grid, Typography, Card, Chip, CardMedia, CardHeader, CardContent, IconButton, CardActions, Collapse,  Stack, Divider, Tooltip } from '@mui/material';
 import { useTheme, styled } from '@mui/material/styles';
 import React from 'react'
 
@@ -54,18 +54,24 @@ const Project = ()  => {
               <CardHeader title={itm.title} subheader={itm.info} sx={{ textOverflow:'clip'}} />
               <CardMedia component="img" height="140" src={process.env.PUBLIC_URL  + `${itm.img}`} alt="green iguana" />
               <CardContent>
-                <Typography variant='body1'  >@{itm.institute}</Typography>
+                <Typography variant='body1' sx={{color: `${theme.palette.primary.highgreen}`}} >@{itm.institute}</Typography>
                 <Typography variant='body2'>under {itm.prof}</Typography>
               </CardContent>
               <CardActions disableSpacing>
-                <IconButton href={itm.url}>
-                  <DescriptionIcon />
-                </IconButton>
+                <Tooltip title='Detailed Report' arrow >
+                  <IconButton href={itm.url} color='gdoc_blue'>
+                    <DescriptionIcon />
+                  </IconButton>
+                </Tooltip>
+
                 {itm.repo && 
-                <IconButton href={itm.repo}>
-                  <GitHubIcon />
-                </IconButton>}
-                <Stack direction="row" size="small" justifyContent="center" spacing={1}>
+                <Tooltip title='Github Repository' arrow  >
+                  <IconButton href={itm.repo} color='twitter_black'>
+                    <GitHubIcon />
+                  </IconButton>
+                </Tooltip>
+                }
+                <Stack direction="row" size="small" justifyContent="flex-end" spacing={1} padding={3}>
                     {itm.tags &&
                       itm.tags.map((it, ix) =>
                       <Chip label={it} key={ix} size="small" />

@@ -22,7 +22,9 @@ const theme = createTheme({
       light: '#99D5BF',
       main: '#fafafa',
       dark:'#579981',
-      contrastText: '#fff',
+      contrastText: '#f7faf8',
+      greenText: "#3C6E53",
+      highgreen: "#1c3426",
       white: '#C7E6C9',
       card: alpha('#80deea', 0.4)
     },
@@ -34,9 +36,12 @@ const theme = createTheme({
     },
     tertiary: {
       light: '#33eb91',
-      main: '#00e676',
+      main: '#C7E6C9',
       dark: '#00a152',
       contrastText: '#000',
+    },
+    text:{
+      primary:"#244230",
     },
     github_white: {
       main: '#fafafa',
@@ -59,6 +64,15 @@ const theme = createTheme({
     love_red:{
       main:'#BB001B'
     },
+    twitter_black:{
+      main:'#030406'
+    },
+    gdoc_blue:{
+      main:'#2582F8'
+    },
+    highlight_green:{
+      main:"#131E16"
+    }
   },
 });
 

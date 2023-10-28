@@ -12,8 +12,8 @@ const hobbiesArr = [   {id:1, title:'Books', icon:<BookIcon />},{id:2, title:'Br
                 ]
 
 const langArr = [
-    { id:2, title:'English', score:5, }, { id:1, title:'Bengali', score:4.5, },
-    { id:3, title:'Hindi', score:3.5, }, { id:4, title:'Deustch', score:1, }
+    { id:2, title:'English', score:5, }, { id:1, title:'Bengali', score:5.0, },
+    { id:3, title:'Hindi', score:3.5, }, { id:4, title:'Deustch', score:1.5, }
 ]
 
 const Others = () => {
@@ -35,7 +35,7 @@ const Others = () => {
                 {langArr.sort((a,b)=>a.id>b.id?1:-1).map((it, ix) => 
                 <Grid item key={ix} xs={4} sm={2}  >
                 <Stack direction="column" spacing={0} alignItems="center" >
-                    <Typography variant='h6' >{it.title}</Typography>
+                    <Typography variant='h6' sx={{ color: `${theme.palette.primary.highgreen }` }} >{it.title}</Typography>
                     <Rating name={it.title} value={it.score} readOnly precision={0.5}  size="large" />
                 </Stack>
                 </Grid>

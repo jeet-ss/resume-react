@@ -45,18 +45,18 @@ const Skills=() => {
             <Grid item key={idx}>
             <Box sx={{ maxWidth:350, minWidth:1, padding:2 }} justifySelf="stretch">
                 <Stack orientation="column" >
-                    <Typography variant="h6" sx={{ textAlign: 'center' }}>{itm.title}</Typography>
+                    <Typography variant="h6" sx={{ textAlign: 'center' , color: `${theme.palette.primary.highgreen}` }}>{itm.title}</Typography>
                     <Divider orientation="horizontal" variant="fullWidth" />
                     {itm.arr.map((it, ix) => 
                         <Stack orientation="column" key={ix}>
-                            <Typography>{it.name}</Typography>
+                            <Typography sx={{ color: `${theme.palette.text.primary}` }} >{it.name}</Typography>
                             {/* <BorderLinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'inherit':(ix+idx)%3===0?'success':'secondary'} /> */}
                             <Box sx={{ display: 'flex', alignItems: 'center' }}>
                                 <Box sx={{ width: '100%', mr: 1 }}>
                                 <BorderLinearProgress variant="determinate" value={it.value} color={(ix+idx)%2===0?'phone_blue':(ix+idx)%3===0?'success':'secondary'} />
                                 </Box>
                                 <Box sx={{ minWidth: 35 }}>
-                                    <Typography variant="body2" >{`${it.value/10}/10`}</Typography>
+                                    <Typography variant="body2" sx={{ color: `${theme.palette.text.primary}` }} >{`${it.value/10}/10`}</Typography>
                                 </Box>
                             </Box>                            
                         </Stack>

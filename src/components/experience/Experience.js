@@ -91,22 +91,22 @@ function Experience() {
                 { listData.sort((a,b)=>a.id<b.id?1:-1).map((itm, idx) => 
                 <TimelineItem key={idx} >
                 <TimelineOppositeContent sx={{ py:9}} >
-                    <Typography variant="subtitle1" >
+                    <Typography variant="subtitle1" sx={{ color: `${theme.palette.text.primary}` }} >
                         {itm.date}
                     </Typography>
                 </TimelineOppositeContent>
                 <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot color="secondary" variant="outlined"/>
-                    <TimelineConnector />
+                    <TimelineConnector  sx={{ bgcolor: `${theme.palette.text.primary}` }} />
+                    <TimelineDot variant="outlined"  color="tertiary" />
+                    <TimelineConnector sx={{ bgcolor: `${theme.palette.text.primary}` }} />
                 </TimelineSeparator>
                 <TimelineContent >
                     {/* <Paper elevation={4} sx={{ bgcolor:`${theme.palette.primary.main}`, padding:1,}}> */}
-                    <Typography variant='h5'>
+                    <Typography variant='h5' sx={{ color: `${theme.palette.text.primary}` }}>
                         {itm.label}
                     </Typography>
-                    <Typography variant='h6' sx={{color: `${theme.palette.primary.contrastText}`}}>{itm.content}</Typography>                    
-                    <Typography variant='body1'>
+                    <Typography variant='h6' sx={{color: `${theme.palette.primary.highgreen}`}}>{itm.content}</Typography>                    
+                    <Typography variant='body1' sx={{color: `${theme.palette.primary.contrastText}`}} >
                         {itm.description}
                     </Typography>
                     {/* <Stack direction="row" justifyContent={ idx%2===0?"flex-start":"flex-end"} > */}

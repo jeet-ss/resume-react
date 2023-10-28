@@ -11,14 +11,15 @@ const About = () => {
     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} sx={{ 
       minHeight: 300,  
       bgcolor: `${theme.palette.primary.white}`,
+      color: `${theme.palette.primary.highgreen}`,
       textAlign: 'center',
       overflow: 'auto',
       //minWidth: 0,
       }} direction="column" alignItems="center" justifyContent="center" padding={4} >
         <Grid item>
-            <Typography variant='h4' paragraph  >
-            My Research interest includes Music/Audio Processing, <br/> 
-            Robotics and their implemenation for solving real life problems.
+            <Typography variant='h4' paragraph >
+            My interest includes Music/Audio Analysis, <br/> 
+             and their implemenation for solving real life problems
           </Typography>
           
           <Typography variant='h4' paragraph >

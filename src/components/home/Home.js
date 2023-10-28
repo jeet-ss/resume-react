@@ -38,7 +38,7 @@ const Home = ()  => {
               <Stack direction="column">
                 <Typography variant="h2">Hello!</Typography>
                 <Typography variant="h2">I am Jeet Sen Sarma</Typography>
-                <Typography variant="h3">AI Enthusiast / Software Developer</Typography>
+                <Typography variant="h3">AI/ML Researcher</Typography>
               </Stack>    
             </Grid>
         </Grid>

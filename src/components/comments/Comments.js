@@ -102,7 +102,7 @@ const Comments = () => {
                 <CardContent>
                     <Stack alignItems="center" direction="column">
                         <FormatQuoteRoundedIcon />
-                        <Typography variant='body1'  >{itm.comment}</Typography>
+                        <Typography variant='body1' sx={{ color: `${theme.palette.text.primary}` }} >{itm.comment}</Typography>
                         <FormatQuoteRoundedIcon />
                     </Stack>
                   

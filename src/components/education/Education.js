@@ -92,9 +92,9 @@ const Education=() => {
         {schoolData.sort((a,b)=>a.id<b.id?1:-1).map((it, ix) =>
           <Grid item key={ix}>
             <Stack direction="column" sx={{ marginBottom:4 }}>
-              <Typography variant='body2'>{it.year}</Typography>
-              <Typography variant='h6'>{it.degree}</Typography>
-              <Typography variant="h5" >{it.title}</Typography>
+              <Typography variant='body2' sx={{ color: `${theme.palette.text.primary}` }} >{it.year}</Typography>
+              <Typography variant='h6' sx={{ color: `${theme.palette.text.primary}` }} >{it.degree}</Typography>
+              <Typography variant="h5" sx={{color: `${theme.palette.primary.highgreen}`}} >{it.title}</Typography>
                 <IconButton>
                     <SvgIcon fontSize='large'>
                     <svg  viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
@@ -116,7 +116,7 @@ const Education=() => {
                     </svg>
                     </SvgIcon>
                 </IconButton>     
-                <Typography variant="body1" >{it.marks}</Typography>   
+                <Typography variant="body1" sx={{ color: `${theme.palette.text.primary}` }} >{it.marks}</Typography>   
             </Stack>
           </Grid>
         )}
