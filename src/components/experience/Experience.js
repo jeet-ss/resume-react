@@ -3,7 +3,6 @@ import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 import { Timeline, TimelineItem, TimelineContent, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineDot, timelineContentClasses} from '@mui/lab';
 
-import { JavaIcon, ReactIcon, PythonIcon, BookIcon, GuitarIcon, PianoIcon } from '../../images/SvgImages';
 
 const listData = [
     {   id: 1,

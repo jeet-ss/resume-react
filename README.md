@@ -1,3 +1,9 @@
+# To-Do for the project
+Change the project description using chat gpt
+add two icons
+add cv pdf link
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

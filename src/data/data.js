@@ -32,16 +32,28 @@ export const aboutData = {
 // PROJECTS DATA
 export const projectsData = [
   {
+    id: 5,
+    img: 'img/llr.png',
+    title: 'Controller design for Artificial leg prostheses',
+    institute: 'FAU, Erlangen',
+    prof: 'Prof. Dr. Anne Koelewijn',
+    info: '01 July 2023 - 10 Nov 2023 ',
+    info2: 'Apllication of different ANN architechtures, like CNN, LSTM, to design a controller for Artificial Leg Prostheses. The data was recorded for 5 positions in the leg and the objective was to predict the output ankle joint torque in future. ',
+    url: 'https://drive.google.com/file/d/12THxSTStOncPAUCRxQIfLS_vv6SjxwhB/view?usp=drive_link',
+    repo: '', // if no repo, the button will not show up
+    tags: ['DL', 'Time-Series'],
+  },
+  {
     id: 4,
-    img: 'img/Peshwar_img1.jpg',
-    title: 'Mini-SPICE',
+    img: 'img/decoder.png',
+    title: 'Implementation of Mini-SPICE from scratch',
     institute: 'FAU, Erlangen',
     prof: 'Prof. Dr. Meinard Müller',
     info: '10 April 2023 - 10 Oct 2023 ',
     info2: 'Open Source, PyTorch re-Implemenation, of a State Of the Art model in the field of Fundamental Frequency tracking in Music signals. The original model named SPICE(Self-supervised PItCh Estimation), doesnot require manually annotated data to train whilst achieving SOA accuracy.',
-    url: 'https://drive.google.com/file/d/1KnrKE8LYWkrzGc-c606Sv3E93MCkSUc7/view?usp=sharing',
+    url: 'https://drive.google.com/file/d/1JN7z9y3PKq6XbcAL8pSUhWVPpiqihNcs/view?usp=drive_link',
     repo: '', // if no repo, the button will not show up
-    tags: ['PyTorch', 'DL'],
+    tags: ['DL', 'Music Analysis'],
   },
   {
     id: 3,
@@ -65,7 +77,7 @@ export const projectsData = [
     info2: 'I worked on an Image Captioning Algorithm using LSTM and CNN under Scientist Biswajit Sarkar in Variable Energy Cyclotron Centre, Kolkata, India.',
     url: 'https://drive.google.com/file/d/1LEBtvQ-wFdj1uLSF6JekOSKkSGLGJjfH/view?usp=sharing',
     repo: 'https://github.com/jeet-ss/Caption_generation.git', // if no repo, the button will not show up
-    tags: [ 'ML','Img2Seq', ]
+    tags: [ 'DL','Img2Seq', ]
   },
   {
     id: 1,
