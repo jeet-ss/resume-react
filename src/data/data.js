@@ -119,16 +119,17 @@ export const footerData = {
 
 const skill_ml = [ 
   {
-      name:"Python",
-      value: 90,
+    name:"Pytorch",
+    value: 80,
   },
   {
-      name:"Pytorch",
-      value: 80,
+      name:"Tensorflow",
+      value: 70,
   },
+  
   {
       name:"Ray tune",
-      value: 30,
+      value: 40,
   },
   {
       name:"Lightning",
@@ -138,8 +139,12 @@ const skill_ml = [
 
 const skill_front = [
   {
+    name:"React",
+    value: 80,
+  },
+  {
       name:"Javascript",
-      value: 90,
+      value: 80,
   },
   {
       name:"Typescript",
@@ -149,12 +154,13 @@ const skill_front = [
       name:"Svelte",
       value: 50,
   },
-  {
-      name:"React",
-      value: 80,
-  },
+  
 ]
 const skill_back = [
+  {
+    name:"Python",
+    value: 90,
+  }, 
   {
       name:"Java",
       value: 80,
@@ -169,30 +175,27 @@ const skill_back = [
       value: 90,
   },
   
-  {
-      name:"Springboot",
-      value: 60,
-  },  
+  
   
 ]
 const skill_cloud = [
   {
       name:"Linux",
-      value: 70,
+      value: 80,
   },
   
+  {
+      name:"Github",
+      value: 70,
+  },
   {
       name:"Docker",
       value: 60,
   },
-  {
-      name:"Collab",
-      value: 50,
-  },
   
   {
-      name:"Aws",
-      value: 70,
+      name:"Aws/Collab",
+      value: 40,
   },]
 
 export const schoolData = [
@@ -229,8 +232,13 @@ export const schoolData = [
     },
 ]
 
-export const skillsData = [ {title:"Machine Learning Tools", arr:skill_ml}, {title: "BackEnd Development",arr:skill_back},  {title: "FrontEnd Development",arr:skill_front}, {title:"Cloud Development ", arr:skill_cloud} ]
-export const pdata = [ {arr:schoolData},]
+export const skillsData = [ 
+  {title:"Machine Learning Tools", arr:skill_ml}, 
+  {title: "BackEnd Development", arr:skill_back},
+  {title: "FrontEnd Development", arr:skill_front},
+  {title:"Cloud Development ", arr:skill_cloud} 
+]
+export const pdata = [ {arr:schoolData}, ]
 
 // Github start/fork buttons
 export const githubButtons = {

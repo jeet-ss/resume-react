@@ -18,12 +18,16 @@ const About = () => {
       }} direction="column" alignItems="center" justifyContent="center" padding={4} >
         <Grid item>
             <Typography variant='h4' paragraph >
-            My interest includes Music/Audio Analysis, <br/> 
-             and their implemenation for solving real life problems
+            I am a highly motivated AI/ML researcher driven by a strong passion  <br/> for 
+            crafting applications that address real-world challenges. <br/>
+            I am committed to staying at the forefront of AI advancements and  <br/>
+             I'm actively pursuing roles across diverse industries<br/>where AI can profoundly influence and 
+             solve pertinent issues.
           </Typography>
           
           <Typography variant='h4' paragraph >
-          Pursuing innovation and building a team to materialize new ideas is my prime objective in life
+          I am wholeheartedly dedicated to the innovative process<br/> and the collective effort required to bring about positive change and progress.
+          {/* Pursuing innovation and building a team to materialize new ideas is my prime objective in life */}
           </Typography>
           </Grid> 
           
