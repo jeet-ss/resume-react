@@ -13,6 +13,38 @@
   }
 }
 
+
+/* 
+light: '#C6D84E',
+main: '#96B704',
+dark:'#2B7100',
+contrastText: '#fff',
+white: alpha('#EFD52A', 0.9),
+card: '#CB9444' */
+
+
+
+
+/* primary: {
+  light: '#757ce8',
+  main: '#3f50b5',
+  dark: '#002884',
+  contrastText: '#fff',
+  white: '#fafafa',
+},
+secondary: {
+  light: '#ff7961',
+  main: '#f44336',
+  dark: '#ba000d',
+  contrastText: '#000',
+},
+tertiary: {
+  light: '#33eb91',
+  main: '#00e676',
+  dark: '#00a152',
+  contrastText: '#000',
+}, */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
