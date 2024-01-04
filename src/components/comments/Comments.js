@@ -110,7 +110,7 @@ const Comments = () => {
                 <Grid sx={{overflow:"auto"}} item container alignItems="center" justifyContent="center" >
                 <Grid item>
                 {/* <Collapse in={true}> */}
-                {(<Card sx={{ minWidth:485,maxWidth:850, bgcolor: alpha(`${theme.palette.primary.card}`, 0.3)}}>
+                {(<Card sx={{ minWidth:450,maxWidth:850, bgcolor: alpha(`${theme.palette.primary.card}`, 0.3)}}>
                  <CardHeader 
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }}>
