@@ -1,4 +1,4 @@
-import {  Grid, Stack,Typography, Divider, LinearProgress, linearProgressClasses } from '@mui/material';
+import {  Grid, Stack,Typography, Divider, LinearProgress, linearProgressClasses, Tooltip, IconButton } from '@mui/material';
 import { useTheme, styled } from '@mui/material/styles';
 import React  from 'react'
 
@@ -96,10 +96,16 @@ const Education=() => {
               <Typography variant='body2' sx={{ color: `${theme.palette.text.primary}` }} >{it.year}</Typography>
               <Typography variant='h6' sx={{ color: `${theme.palette.text.primary}` }} >{it.degree}</Typography>
               <Typography variant="h5" sx={{color: `${theme.palette.primary.highgreen}`}} >{it.title}</Typography>
-              <MedalIcon />
-              {/* <IconButton>
+              {it.url && 
+                <Tooltip title='Graduation certificate' arrow  >
+                  <IconButton href={it.url} color='twitter_black'>
                   <MedalIcon />
-              </IconButton>      */}
+                  </IconButton>
+                </Tooltip>
+              }
+              {!it.url && 
+                <MedalIcon />
+              }
               <Typography variant="body1" sx={{ color: `${theme.palette.text.primary}` }} >{it.marks}</Typography>   
             </Stack>
           </Grid>

@@ -24,13 +24,75 @@ export const aboutData = {
   paragraphThree: 'Download my Resume to know me better',
   resume: 'https://drive.google.com/file/d/144LLvCHmjDYmkJRJUTuDpsDOXK7Ge5z6/view?usp=sharing', // if no resume, the button will not show up
 };
-
+//////////////////////////////
 // Experience Data
-
-
-
+//////////////////////////////
+export const experienceData = [
+  {   id: 1,
+      label: "Application Developer | FullTime",
+      date: "7 Aug 2019 - 29 Oct 2020",
+      content:"Comviva, Bangalore, India", 
+      description: "End-to-End Development of Web Applications using Micro-Services architecture.",
+      tags: [ { title:"Java", img:'img/java_logo.png' },{ title:"React", img:'img/react_logo.png' },{ title:"SpringFramework", img:'img/spring_logo_wh.png'}, ],
+  },
+  {   
+      id:2,
+      label: "Web Developer | WerkStudent",
+      date: "1 Jun 2021 - 30 Nov 2021",
+      content: "Lehrstuhl für Ressourcen- und Energie effiziente Produktions maschinen, FAU, Nürnberg, Germany", 
+      description:"Development of common platform for sharing of resources among production industries in Germany.",
+      tags: [ { title:"React", img:'img/react_logo.png' },{ title:"Mi UI", img:'img/mui_logo.png'}, { title:"TypeScript", img:'img/Typescript_logo.png'}],
+  },
+  {   
+      id:3,
+      label: "TA for Computer Vision | WerkStudent",
+      date: "14 Apr 2022 - 31 Jul 2022",
+      content: "Lehrstuhl für Informatik 5, FAU, Erlangen, Germany", 
+      description: "Helping students hands on with CV techniques and algorithms in Python during the Summer Semester of 2022",
+      tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"OpenCV", img:'img/opencv_svg.png' }],
+  },
+  {   
+      id:4,
+      label: "TA in Algorithms and Programming | WerkStudent",
+      date: "1 Oct 2022 - 31 Mar 2023",
+      content: "Professur für Image Data Exploration and Analysis, FAU, Erlangen, Germany", 
+      description: "Guiding students in their journey of Algorithms and Programming with Python. ",
+      tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"MS Office",img:'img/ms_logo_bl.png' }],
+  },
+  {   
+      id:5,
+      label: "Research Intern | WerkStudent",
+      date: "1 Jan 2023 - 31 June 2023",
+      content: "Fraunhofer IIS, Nürnberg, Germany", 
+      description: "Designing Quantum compilers using deep reinforcement learning at Self Learning Systems group",
+      tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png'},{ title:"Qiskit", img:'img/qiskit_logo.png'}],
+  },
+  {   
+      id:6,
+      label: "Research Intern | WerkStudent",
+      date: "1 Aug 2023 - 30 Dec 2023",
+      content: "International AudioLabs, Erlangen, Germany", 
+      description: "Automatic Transcription of Piano music using Deep Learning",
+      tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' } ],
+  }
+]
+//////////////////////////////
 // PROJECTS DATA
+//////////////////////////////
+
 export const projectsData = [
+  {
+    id: 6,
+    img: 'img/thesis2.png',
+    title: 'Room Acoustical Parameter Estimation from Room Impulse Responses Using Deep Neural Networks',
+    institute: 'FAU, Erlangen',
+    prof: 'Dr.-Ing. Maximilian Schäfer, Prof. Dr.-Ing. Sebastian Schlecht',
+    info: '01 July 2023 - 10 Nov 2023 ',
+    info2: 'This thesis outlines a method for estimating the geometry of a room and reflection coefficients based on Room Impulse Responses (R.I.R.). The approach leverages the solution of omnidirectional damping density and employs the Gradient Descent al-gorithm to address the inverse problem.',
+    url: 'https://drive.google.com/file/d/12tW0p2O41hvUhT9aJw8EAqX-rm8zesQH/view?usp=drive_link',
+    repo: 'https://github.com/jeet-ss/ShoeboxEnergyDecay_PyTorch.git', // if no repo, the button will not show up
+    tags: ['ML', 'Differentiable Physics'],
+  },
   {
     id: 5,
     img: 'img/llr.png',
@@ -40,7 +102,7 @@ export const projectsData = [
     info: '01 July 2023 - 10 Nov 2023 ',
     info2: 'Apllication of different ANN architechtures, like CNN, LSTM, to design a controller for Artificial Leg Prostheses. The data was recorded for 5 positions in the leg and the objective was to predict the output ankle joint torque in future. ',
     url: 'https://drive.google.com/file/d/12THxSTStOncPAUCRxQIfLS_vv6SjxwhB/view?usp=drive_link',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/jeet-ss/LeggedLocomotion.git', // if no repo, the button will not show up
     tags: ['DL', 'Time-Series'],
   },
   {
@@ -52,7 +114,7 @@ export const projectsData = [
     info: '10 April 2023 - 10 Oct 2023 ',
     info2: 'Open Source, PyTorch re-Implemenation, of a State Of the Art model in the field of Fundamental Frequency tracking in Music signals. The original model named SPICE(Self-supervised PItCh Estimation), doesnot require manually annotated data to train whilst achieving SOA accuracy.',
     url: 'https://drive.google.com/file/d/1JN7z9y3PKq6XbcAL8pSUhWVPpiqihNcs/view?usp=drive_link',
-    repo: '', // if no repo, the button will not show up
+    repo: 'https://github.com/jeet-ss/Mini_SPICE.git', // if no repo, the button will not show up
     tags: ['DL', 'Music Analysis'],
   },
   {
@@ -95,8 +157,10 @@ export const projectsData = [
   
   
 ];
-
+//////////////////////////////
 // CONTACT DATA
+//////////////////////////////
+
 export const contactData = {
   cta: "Would you like to get to know me better? Awesome!",
   btn: "Let's Talk",
@@ -128,7 +192,9 @@ export const footerData = {
     },
   ],
 };
-
+//////////////////////////////
+// Skills
+//////////////////////////////
 const skill_ml = [ 
   {
     name:"Pytorch",
@@ -209,7 +275,9 @@ const skill_cloud = [
       name:"Aws/Collab",
       value: 40,
   },]
-
+//////////////////////////////
+// School EducationData
+//////////////////////////////
 export const schoolData = [
     
     {
@@ -228,6 +296,7 @@ export const schoolData = [
         degree: 'Bachelor of Technology in Electronics and Communication Engineering',
         marks: 'CGPA 9.1',
         year:'2019',
+        url: 'https://drive.google.com/file/d/140-oKOUt3ziw8noEZdT0a979i42th6rU/view?usp=drive_link',
         value: 80,
         abc: "75%",
         a2: "50"
@@ -236,8 +305,9 @@ export const schoolData = [
         id: 3,
         title: 'Friedrich-Alexander Universität, Erlangen-Nürnberg, Germany',
         degree: 'Master of Science in Artificial Intelligence',
-        marks: 'GPA 1.7',
-        year:'2023',
+        marks: 'GPA 1.5',
+        year:'2024',
+        url: 'https://drive.google.com/file/d/1LEBtvQ-wFdj1uLSF6JekOSKkSGLGJjfH/view?usp=sharing',
         value: 90,
         abc: "100%",
         a2: "10"
@@ -256,3 +326,17 @@ export const pdata = [ {arr:schoolData}, ]
 export const githubButtons = {
   isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
+
+
+export const commentsList = [
+  {
+      id: 1,
+      av:"MM",
+      name: "Prof. Dr. Meinard Müller",
+      designation: "AI labs",
+      company: "INTERNATIONAL AUDIO LABORATORIES ERLANGEN",
+      comment: "Jeet actively participated in my music processing lecture, pursued a research internship, and worked as a student assistant in my group at the International Audio Laboratories Erlangen. He possesses extensive, in-depth, and varied expertise in machine learning, effectively applying this knowledge in practical scenarios. Jeet showed strong motivation and displayed a high level of initiative and dedication. He consistently demonstrated impressive scientific understanding, along with an excellent ability to collaborate within a team."
+
+  },
+  
+]

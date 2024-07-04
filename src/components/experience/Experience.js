@@ -2,57 +2,9 @@ import { Paper, Grid, Stack, Typography, Chip, Divider, Avatar,  } from '@mui/ma
 import { useTheme } from '@mui/material/styles';
 import React, { useState, useEffect }  from 'react'
 import { Timeline, TimelineItem, TimelineContent, TimelineOppositeContent, TimelineSeparator, TimelineConnector, TimelineDot, timelineContentClasses} from '@mui/lab';
+import {  experienceData } from '../../data/data';
 
 
-const listData = [
-    {   id: 1,
-        label: "Application Developer | FullTime",
-        date: "7 Aug 2019 - 29 Oct 2020",
-        content:"Comviva, Bangalore, India", 
-        description: "End-to-End Development of Web Applications using Micro-Services architecture.",
-        tags: [ { title:"Java", img:'img/java_logo.png' },{ title:"React", img:'img/react_logo.png' },{ title:"SpringFramework", img:'img/spring_logo_wh.png'}, ],
-    },
-    {   
-        id:2,
-        label: "Web Developer | WerkStudent",
-        date: "1 Jun 2021 - 30 Nov 2021",
-        content: "Lehrstuhl für Ressourcen- und Energie effiziente Produktions maschinen, FAU, Nürnberg, Germany", 
-        description:"Development of common platform for sharing of resources among production industries in Germany.",
-        tags: [ { title:"React", img:'img/react_logo.png' },{ title:"Mi UI", img:'img/mui_logo.png'}, { title:"TypeScript", img:'img/Typescript_logo.png'}],
-    },
-    {   
-        id:3,
-        label: "TA for Computer Vision | WerkStudent",
-        date: "14 Apr 2022 - 31 Jul 2022",
-        content: "Lehrstuhl für Informatik 5, FAU, Erlangen, Germany", 
-        description: "Helping students hands on with CV techniques and algorithms in Python during the Summer Semester of 2022",
-        tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"OpenCV", img:'img/opencv_svg.png' }],
-    },
-    {   
-        id:4,
-        label: "TA in Algorithms and Programming | WerkStudent",
-        date: "1 Oct 2022 - 31 Mar 2023",
-        content: "Professur für Image Data Exploration and Analysis, FAU, Erlangen, Germany", 
-        description: "Guiding students in their journey of Algorithms and Programming with Python. ",
-        tags: [ { title:"Python", img:'img/python_logo.png'},{ title:"MS Office",img:'img/ms_logo_bl.png' }],
-    },
-    {   
-        id:5,
-        label: "Research Intern | WerkStudent",
-        date: "1 Jan 2023 - 31 June 2023",
-        content: "Fraunhofer IIS, Nürnberg, Germany", 
-        description: "Designing Quantum compilers using deep reinforcement learning at Self Learning Systems group",
-        tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png'},{ title:"Qiskit", img:'img/qiskit_logo.png'}],
-    },
-    {   
-        id:6,
-        label: "Research Intern | WerkStudent",
-        date: "1 Aug 2023 - Ongoing",
-        content: "International AudioLabs, Erlangen, Germany", 
-        description: "Automatic Transcription of Piano music using Deep Learning",
-        tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' } ],
-    }
-]
 
 function Experience() {
 
@@ -87,7 +39,7 @@ function Experience() {
         <Grid item sx={{ marginBottom:4, contain:'layout' }}>
             
             <Timeline position="alternate" >
-                { listData.sort((a,b)=>a.id<b.id?1:-1).map((itm, idx) => 
+                { experienceData.sort((a,b)=>a.id<b.id?1:-1).map((itm, idx) => 
                 <TimelineItem key={idx} >
                 <TimelineOppositeContent sx={{ py:9}} >
                     <Typography variant="subtitle1" sx={{ color: `${theme.palette.text.primary}` }} >

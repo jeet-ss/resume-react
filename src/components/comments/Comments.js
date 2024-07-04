@@ -8,64 +8,9 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import CloseIcon from '@mui/icons-material/Close';
 import { Filter } from '@mui/icons-material';
+import {  commentsList } from '../../data/data';
 
 
-const commentsList = [
-    {
-        id: 1,
-        av:"MM",
-        name: "Prof. Dr. Meinard Müller",
-        designation: "AI labs",
-        company: "INTERNATIONAL AUDIO LABORATORIES ERLANGEN",
-        comment: "Jeet actively participated in my music processing lecture, pursued a research internship, and worked as a student assistant in my group at the International Audio Laboratories Erlangen. He possesses extensive, in-depth, and varied expertise in machine learning, effectively applying this knowledge in practical scenarios. Jeet showed strong motivation and displayed a high level of initiative and dedication. He consistently demonstrated impressive scientific understanding, along with an excellent ability to collaborate within a team."
-
-    },
-    {
-        id: 2,
-        av:"B",
-        name: "prof B",
-        designation: "AI labs",
-        company: "Fau",
-        comment: "Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum"
-
-    },
-    {
-        id: 3,
-        av:"C",
-        name: "prof C",
-        designation: "AI labs",
-        company: "Fau",
-        comment: "Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum"
-
-    },
-    {
-        id: 4,
-        av:"D",
-        name: "prof D",
-        designation: "AI labs",
-        company: "Fau",
-        comment: "Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum"
-
-    },
-    {
-        id: 5,
-        av:"C",
-        name: "prof C",
-        designation: "AI labs",
-        company: "Fau",
-        comment: "Lorem Ipsum Lorem Ipsum Lorem Ipsum"
-
-    },
-    {
-        id: 6,
-        av:"D",
-        name: "prof D",
-        designation: "AI labs",
-        company: "Fau",
-        comment: "Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum"
-
-    }
-]
 
 const Comments = () => {
   const theme = useTheme(); 
@@ -95,14 +40,6 @@ const Comments = () => {
          direction="column" 
         //  alignItems="center" justifyContent="flex-start"  
          padding={3} spacing={3}>
-        {/* <Grid item>
-          <Stack direction="column">
-            <Typography variant='h3'>My Projects</Typography>
-          </Stack>
-          
-        </Grid> */}
-        
-        {/* <Grid item container direction="row" sx={{ overflow:'scroll' }}  rowSpacing={1} columnSpacing={3}  padding={2} alignItems="center" justifyContent="space-between"> */}
         
         {activeIndex === 0 ? <></> :
         // <Box sx = {{alignItems:"center" , justifyContent:"center", paddingX:50}} >
