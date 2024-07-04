@@ -307,7 +307,7 @@ export const schoolData = [
         degree: 'Master of Science in Artificial Intelligence',
         marks: 'GPA 1.5',
         year:'2024',
-        url: 'https://drive.google.com/file/d/1LEBtvQ-wFdj1uLSF6JekOSKkSGLGJjfH/view?usp=sharing',
+        url: 'https://drive.google.com/file/d/1V5eYka7V7vm1ON7OoLniG93kcGv_akX-/view?usp=drive_link',
         value: 90,
         abc: "100%",
         a2: "10"
