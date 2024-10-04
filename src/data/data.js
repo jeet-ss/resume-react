@@ -73,8 +73,17 @@ export const experienceData = [
       date: "1 Aug 2023 - 30 Dec 2023",
       content: "International AudioLabs, Erlangen, Germany", 
       description: "Automatic Transcription of Piano music using Deep Learning",
-      tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' } ],
-  }
+      tags: [ { title:"PyTorch", img:'img/pytorch_logo_black.png' }, ],
+  },
+  {   
+    id:7,
+    label: "Research Assistant",
+    date: "16 Aug 2024 - Present",
+    content: "Intelligent Embedded System, University of Kassel", 
+    description: "Explainability of Graph Neural Networks.",
+    tags: [ { title:"PyTorch-Geometric", img:'img/pyg_logo.png' },
+            { title:"Captum", img:'img/captum-icon.png' } ],
+}
 ]
 //////////////////////////////
 // PROJECTS DATA
@@ -84,9 +93,9 @@ export const projectsData = [
   {
     id: 6,
     img: 'img/thesis2.png',
-    title: 'Room Acoustical Parameter Estimation from Room Impulse Responses Using Deep Neural Networks',
+    title: 'Acoustical Parameter Estimation from Room Impulse Responses',
     institute: 'FAU, Erlangen',
-    prof: 'Dr.-Ing. Maximilian Schäfer, Prof. Dr.-Ing. Sebastian Schlecht',
+    prof: 'Dr.-Ing. Maximilian Schäfer, Prof. Sebastian Schlecht',
     info: '01 July 2023 - 10 Nov 2023 ',
     info2: 'This thesis outlines a method for estimating the geometry of a room and reflection coefficients based on Room Impulse Responses (R.I.R.). The approach leverages the solution of omnidirectional damping density and employs the Gradient Descent al-gorithm to address the inverse problem.',
     url: 'https://drive.google.com/file/d/12tW0p2O41hvUhT9aJw8EAqX-rm8zesQH/view?usp=drive_link',
@@ -96,7 +105,7 @@ export const projectsData = [
   {
     id: 5,
     img: 'img/llr.png',
-    title: 'Controller design for Artificial leg prostheses',
+    title: 'Controller Design for Artificial Leg prostheses',
     institute: 'FAU, Erlangen',
     prof: 'Prof. Dr. Anne Koelewijn',
     info: '01 July 2023 - 10 Nov 2023 ',
